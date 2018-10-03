@@ -10914,6 +10914,13 @@ Source: AVX .. aphvc.pdf</description>
 <junction x="-103.632" y="106.426"/>
 <label x="-109.982" y="106.426" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="GND"/>
+<wire x1="109.78" y1="61.46" x2="116.332" y2="61.46" width="0.1524" layer="91"/>
+<wire x1="116.332" y1="61.46" x2="116.332" y2="61.468" width="0.1524" layer="91"/>
+<junction x="116.332" y="61.468"/>
+<label x="119.634" y="61.468" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="D-" class="0">
 <segment>
@@ -10998,27 +11005,6 @@ Source: AVX .. aphvc.pdf</description>
 <label x="-106.172" y="97.282" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="PB4(ADC11)"/>
-<wire x1="15.4" y1="64.54" x2="20.828" y2="64.54" width="0.1524" layer="91"/>
-<wire x1="20.828" y1="64.54" x2="20.828" y2="64.516" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="PB5(OC1A/ADC12/!OC4B)"/>
-<wire x1="15.4" y1="67.08" x2="21.082" y2="67.08" width="0.1524" layer="91"/>
-<wire x1="21.082" y1="67.08" x2="21.082" y2="67.31" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="PB6(OC1B/OC4B/ADC13)"/>
-<wire x1="15.4" y1="69.62" x2="21.082" y2="69.62" width="0.1524" layer="91"/>
-<wire x1="21.082" y1="69.62" x2="21.082" y2="69.85" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PE6(INT.6/AIN0)"/>
@@ -11035,11 +11021,11 @@ Source: AVX .. aphvc.pdf</description>
 <label x="119.38" y="79.248" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="PC6(OC3A/!OC4A)"/>
-<wire x1="15.4" y1="79.78" x2="21.336" y2="79.78" width="0.1524" layer="91"/>
-<wire x1="21.336" y1="79.78" x2="21.336" y2="80.01" width="0.1524" layer="91"/>
-<junction x="21.336" y="80.01"/>
-<label x="24.638" y="79.756" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="PD7(OC4D/ADC10/T0)"/>
+<wire x1="15.4" y1="49.3" x2="20.828" y2="49.3" width="0.1524" layer="91"/>
+<wire x1="20.828" y1="49.3" x2="20.828" y2="49.276" width="0.1524" layer="91"/>
+<junction x="20.828" y="49.276"/>
+<label x="23.114" y="49.276" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWMB" class="0">
@@ -11065,6 +11051,91 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="20.828" y1="72.16" x2="20.828" y2="72.136" width="0.1524" layer="91"/>
 <junction x="20.828" y="72.136"/>
 <label x="25.146" y="72.136" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="AIN2" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="AIN2"/>
+<wire x1="109.78" y1="76.7" x2="116.84" y2="76.7" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="76.7" x2="116.84" y2="76.708" width="0.1524" layer="91"/>
+<junction x="116.84" y="76.708"/>
+<wire x1="116.84" y1="76.708" x2="116.84" y2="76.962" width="0.1524" layer="91"/>
+<label x="119.634" y="76.708" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="PB4(ADC11)"/>
+<wire x1="15.4" y1="64.54" x2="20.828" y2="64.54" width="0.1524" layer="91"/>
+<wire x1="20.828" y1="64.54" x2="20.828" y2="64.516" width="0.1524" layer="91"/>
+<junction x="20.828" y="64.516"/>
+<label x="25.146" y="64.77" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="AIN1" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="AIN1"/>
+<wire x1="109.78" y1="74.16" x2="109.78" y2="74.168" width="0.1524" layer="91"/>
+<wire x1="109.78" y1="74.168" x2="116.84" y2="74.168" width="0.1524" layer="91"/>
+<junction x="116.84" y="74.168"/>
+<wire x1="116.84" y1="74.168" x2="117.094" y2="74.168" width="0.1524" layer="91"/>
+<label x="119.888" y="74.168" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="PB5(OC1A/ADC12/!OC4B)"/>
+<wire x1="15.4" y1="67.08" x2="21.082" y2="67.08" width="0.1524" layer="91"/>
+<wire x1="21.082" y1="67.08" x2="21.082" y2="67.31" width="0.1524" layer="91"/>
+<junction x="21.082" y="67.31"/>
+<label x="25.146" y="67.564" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="STBY" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="STBY"/>
+<wire x1="109.78" y1="66.54" x2="109.78" y2="66.548" width="0.1524" layer="91"/>
+<wire x1="109.78" y1="66.548" x2="117.856" y2="66.548" width="0.1524" layer="91"/>
+<junction x="117.856" y="66.548"/>
+<wire x1="117.856" y1="66.548" x2="118.11" y2="66.548" width="0.1524" layer="91"/>
+<label x="119.634" y="66.548" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="VCC" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="VCC"/>
+<wire x1="109.78" y1="69.08" x2="109.78" y2="69.088" width="0.1524" layer="91"/>
+<wire x1="109.78" y1="69.088" x2="117.348" y2="69.088" width="0.1524" layer="91"/>
+<junction x="117.348" y="69.088"/>
+<label x="119.634" y="68.834" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="BIN1" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="BIN1"/>
+<wire x1="109.78" y1="56.38" x2="116.332" y2="56.38" width="0.1524" layer="91"/>
+<wire x1="116.332" y1="56.38" x2="116.332" y2="56.388" width="0.1524" layer="91"/>
+<junction x="116.332" y="56.388"/>
+<label x="119.634" y="56.388" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="PB6(OC1B/OC4B/ADC13)"/>
+<wire x1="15.4" y1="69.62" x2="21.082" y2="69.62" width="0.1524" layer="91"/>
+<wire x1="21.082" y1="69.62" x2="21.082" y2="69.85" width="0.1524" layer="91"/>
+<junction x="21.082" y="69.85"/>
+<label x="25.146" y="69.85" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="BIN2" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="BIN2"/>
+<wire x1="109.78" y1="53.84" x2="116.332" y2="53.84" width="0.1524" layer="91"/>
+<wire x1="116.332" y1="53.84" x2="116.332" y2="53.848" width="0.1524" layer="91"/>
+<junction x="116.332" y="53.848"/>
+<label x="119.634" y="53.848" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="PC6(OC3A/!OC4A)"/>
+<wire x1="15.4" y1="79.78" x2="21.336" y2="79.78" width="0.1524" layer="91"/>
+<wire x1="21.336" y1="79.78" x2="21.336" y2="80.01" width="0.1524" layer="91"/>
+<junction x="21.336" y="80.01"/>
+<label x="24.638" y="79.756" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
