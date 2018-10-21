@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="10" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -12686,7 +12686,7 @@ Source: www.kingbright.com</description>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="100nF"/>
 <part name="RESETBUTTON" library="switch-omron" library_urn="urn:adsk.eagle:library:377" deviceset="10-XX" device="" package3d_urn="urn:adsk.eagle:package:27496/1"/>
 <part name="IC2" library="linear" deviceset="LM339" device="D"/>
-<part name="R2" library="pot" library_urn="urn:adsk.eagle:library:331" deviceset="TRIM_EU-" device="CA6V" package3d_urn="urn:adsk.eagle:package:22691/1" value="100k"/>
+<part name="POT" library="pot" library_urn="urn:adsk.eagle:library:331" deviceset="TRIM_EU-" device="CA6V" package3d_urn="urn:adsk.eagle:package:22691/1" value="100k"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
@@ -12738,6 +12738,7 @@ Source: www.kingbright.com</description>
 <part name="R21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="220R"/>
 <part name="P+20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12761,7 +12762,7 @@ Source: www.kingbright.com</description>
 <instance part="IC2" gate="B" x="221.4" y="69.7"/>
 <instance part="IC2" gate="C" x="227" y="33.8"/>
 <instance part="IC2" gate="D" x="223.2" y="-7.2"/>
-<instance part="R2" gate="1" x="186.3" y="87" rot="R90"/>
+<instance part="POT" gate="1" x="186.3" y="87" rot="R90"/>
 <instance part="GND1" gate="1" x="191.5" y="84.2"/>
 <instance part="P+1" gate="VCC" x="181.2" y="91.3"/>
 <instance part="R3" gate="G$1" x="210.148" y="115.062" rot="R90"/>
@@ -12813,6 +12814,7 @@ Source: www.kingbright.com</description>
 <instance part="R21" gate="G$1" x="235.648" y="12.362" rot="R90"/>
 <instance part="P+20" gate="VCC" x="235.7" y="20.8"/>
 <instance part="P+5" gate="VCC" x="-38.1" y="97.8"/>
+<instance part="GND4" gate="1" x="70.866" y="69.85"/>
 </instances>
 <busses>
 <bus name="B$1">
@@ -13037,7 +13039,7 @@ Source: www.kingbright.com</description>
 <label x="119.634" y="61.468" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R2" gate="1" pin="A"/>
+<pinref part="POT" gate="1" pin="A"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="191.38" y1="87" x2="191.38" y2="86.74" width="0.1524" layer="91"/>
 <wire x1="191.38" y1="86.74" x2="191.5" y2="86.74" width="0.1524" layer="91"/>
@@ -13089,6 +13091,14 @@ Source: www.kingbright.com</description>
 <pinref part="GND12" gate="1" pin="GND"/>
 <wire x1="197.42" y1="-10.14" x2="198.9" y2="-10.14" width="0.1524" layer="91"/>
 <wire x1="198.9" y1="-10.14" x2="198.9" y2="-11.06" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="74.168" y1="74.168" x2="70.866" y2="74.168" width="0.1524" layer="91"/>
+<wire x1="70.866" y1="74.168" x2="70.866" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="70.866" y1="73.66" x2="70.866" y2="72.39" width="0.1524" layer="91"/>
+<wire x1="74.168" y1="76.708" x2="70.866" y2="76.708" width="0.1524" layer="91"/>
+<wire x1="70.866" y1="76.708" x2="70.866" y2="74.168" width="0.1524" layer="91"/>
+<pinref part="GND4" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="D-" class="0">
@@ -13276,7 +13286,7 @@ Source: www.kingbright.com</description>
 </segment>
 <segment>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
-<pinref part="R2" gate="1" pin="E"/>
+<pinref part="POT" gate="1" pin="E"/>
 <wire x1="181.2" y1="88.76" x2="181.2" y2="87" width="0.1524" layer="91"/>
 <wire x1="181.2" y1="87" x2="181.22" y2="87" width="0.1524" layer="91"/>
 </segment>
@@ -13441,7 +13451,7 @@ Source: www.kingbright.com</description>
 </net>
 <net name="POT" class="0">
 <segment>
-<pinref part="R2" gate="1" pin="S"/>
+<pinref part="POT" gate="1" pin="S"/>
 <wire x1="186.3" y1="92.08" x2="192.68" y2="92.08" width="0.1524" layer="91"/>
 <label x="194.3" y="92.1" size="1.778" layer="95"/>
 </segment>
