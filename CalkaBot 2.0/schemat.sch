@@ -12865,6 +12865,14 @@ Source: www.cypressindustries.com</description>
 <wire x1="-55.88" y1="116.84" x2="-55.88" y2="101.6" width="0.762" layer="92"/>
 </segment>
 </bus>
+<bus name="B$3">
+<segment>
+<wire x1="-111.76" y1="7.62" x2="-111.76" y2="-20.32" width="0.762" layer="92" style="shortdash"/>
+<wire x1="-111.76" y1="-20.32" x2="60.96" y2="-20.32" width="0.762" layer="92" style="shortdash"/>
+<wire x1="60.96" y1="-20.32" x2="60.96" y2="7.62" width="0.762" layer="92" style="shortdash"/>
+<wire x1="60.96" y1="7.62" x2="-111.76" y2="7.62" width="0.762" layer="92" style="shortdash"/>
+</segment>
+</bus>
 </busses>
 <nets>
 <net name="RST" class="0">
