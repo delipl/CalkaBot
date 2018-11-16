@@ -353,6 +353,7 @@ UsedLibrary="/opt/eagle/lbr/Pololu Encoder and Motor Driver.lbr"
 UsedLibrary="/opt/eagle/lbr/PololuMG_v2.lbr"
 UsedLibrary="/opt/eagle/lbr/linear3.lbr"
 UsedLibrary="/opt/eagle/lbr/pololu2.lbr"
+UsedLibrary="/opt/eagle/lbr/switch-tact (1).lbr"
 
 [Win_1]
 Type="Control Panel"
