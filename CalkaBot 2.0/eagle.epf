@@ -348,10 +348,10 @@ UsedLibraryUrn="urn:adsk.eagle:library:174"
 UsedLibraryUrn="urn:adsk.eagle:library:175"
 UsedLibraryUrn="urn:adsk.eagle:library:176"
 UsedLibraryUrn="urn:adsk.eagle:library:177"
-UsedLibrary="/opt/eagle/lbr/linear3.lbr"
+UsedLibrary="/opt/eagle/lbr/GP2Y0D340K0F.lbr"
 UsedLibrary="/opt/eagle/lbr/Pololu Encoder and Motor Driver.lbr"
 UsedLibrary="/opt/eagle/lbr/PololuMG_v2.lbr"
-UsedLibrary="/opt/eagle/lbr/GP2Y0D340K0F.lbr"
+UsedLibrary="/opt/eagle/lbr/linear3.lbr"
 UsedLibrary="/opt/eagle/lbr/pololu2.lbr"
 
 [Win_1]
