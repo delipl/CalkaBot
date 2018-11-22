@@ -21305,6 +21305,45 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="untitled">
+<packages>
+<package name="GND">
+<wire x1="0.5" y1="0.1" x2="0" y2="0.1" width="0.2" layer="16"/>
+<wire x1="0" y1="0.1" x2="-0.5" y2="0.1" width="0.2" layer="16"/>
+<wire x1="-0.3" y1="-0.2" x2="0.3" y2="-0.2" width="0.2" layer="16"/>
+<wire x1="0" y1="0.8" x2="0" y2="0.1" width="0.2" layer="16"/>
+</package>
+</packages>
+<symbols>
+<symbol name="SNG">
+<wire x1="-43.18" y1="7.62" x2="-43.18" y2="0" width="2.54" layer="94"/>
+<wire x1="-50.8" y1="0" x2="-35.56" y2="0" width="2.54" layer="94"/>
+<wire x1="-45.72" y1="-5.08" x2="-40.64" y2="-5.08" width="2.54" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GND" uservalue="yes">
+<description>siemanko</description>
+<gates>
+<gate name="G$1" symbol="SNG" x="12.7" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="GND">
+<technologies>
+<technology name="">
+<attribute name="UZ" value="gnd" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="LOL" package="GND">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -21331,7 +21370,9 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device="">
+<attribute name="SPICEPREFIX" value="G"/>
+</part>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="180R"/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
@@ -21410,6 +21451,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <part name="SW1" library="special" library_urn="urn:adsk.eagle:library:367" deviceset="SW_DIP-1" device="" package3d_urn="urn:adsk.eagle:package:26661/1"/>
 <part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X5" device="" package3d_urn="urn:adsk.eagle:package:22469/2"/>
 <part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X5" device="" package3d_urn="urn:adsk.eagle:package:22469/2"/>
+<part name="U$3" library="untitled" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -21519,6 +21561,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <instance part="SW1" gate="G$1" x="68.58" y="101.6" rot="R180"/>
 <instance part="JP2" gate="A" x="-119.38" y="25.4" rot="R270"/>
 <instance part="JP3" gate="A" x="-119.38" y="15.24" rot="R270"/>
+<instance part="U$3" gate="G$1" x="-58.42" y="154.94"/>
 </instances>
 <busses>
 <bus name="B$1">
