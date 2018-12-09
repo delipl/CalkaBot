@@ -8,17 +8,17 @@
 </settings>
 <grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="mm" altunit="mm"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
@@ -32,9 +32,9 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
@@ -44,7 +44,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -3184,193 +3184,11 @@ design rules under a new name.</description>
 <vertex x="3.3" y="67.8"/>
 </polygon>
 </signal>
-<signal name="N$6">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="19.3" y="63.6"/>
-<vertex x="19.3" y="61.9"/>
-<vertex x="21.3" y="62.1"/>
-<vertex x="20.8" y="63.1"/>
-<vertex x="19.8" y="63.6"/>
-</polygon>
-</signal>
-<signal name="N$8">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="23.9" y="63.7"/>
-<vertex x="23" y="62.2"/>
-<vertex x="25.2" y="62.2"/>
-<vertex x="25.1" y="63.5"/>
-</polygon>
-</signal>
-<signal name="N$14">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="20.9" y="57"/>
-<vertex x="20.9" y="55.6"/>
-<vertex x="22.4" y="55.6"/>
-<vertex x="22.4" y="57"/>
-</polygon>
-</signal>
-<signal name="N$18">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="16.3" y="57"/>
-<vertex x="14.8" y="55.2"/>
-<vertex x="16" y="54.4"/>
-<vertex x="20.8" y="54.7"/>
-<vertex x="20.8" y="56.1"/>
-</polygon>
-</signal>
-<signal name="N$20">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="5.3" y="50.6"/>
-<vertex x="5.6" y="49.1"/>
-<vertex x="8.2" y="50.1"/>
-<vertex x="9.2" y="51.7"/>
-<vertex x="8.4" y="52.4"/>
-<vertex x="7.8" y="52.4"/>
-</polygon>
-</signal>
-<signal name="N$21">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="35.3" y="51.4"/>
-<vertex x="35.4" y="49.6"/>
-<vertex x="38.2" y="49.6"/>
-<vertex x="37.7" y="51.5"/>
-</polygon>
-</signal>
-<signal name="N$22">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="21.8" y="17.3"/>
-<vertex x="20.8" y="16.1"/>
-<vertex x="23.3" y="15.4"/>
-<vertex x="25.2" y="15.1"/>
-<vertex x="25.9" y="16.5"/>
-<vertex x="24.8" y="17.2"/>
-</polygon>
-</signal>
-<signal name="N$24">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="25.4" y="20.5"/>
-<vertex x="23.3" y="18.2"/>
-<vertex x="23.8" y="17.5"/>
-<vertex x="25.6" y="17.3"/>
-<vertex x="25.8" y="17.3"/>
-<vertex x="27.1" y="18.5"/>
-<vertex x="27" y="20.2"/>
-<vertex x="25.8" y="20.3"/>
-<vertex x="25.6" y="20.3"/>
-<vertex x="25.4" y="20.2"/>
-<vertex x="23.3" y="18.2"/>
-</polygon>
-</signal>
-<signal name="N$26">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="63.8" y="59"/>
-<vertex x="63.8" y="57.1"/>
-<vertex x="66.4" y="57.1"/>
-<vertex x="64.4" y="58.9"/>
-</polygon>
-</signal>
-<signal name="N$28">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="49.5" y="54.3"/>
-<vertex x="48" y="52.8"/>
-<vertex x="50.6" y="50.4"/>
-<vertex x="52.1" y="51.8"/>
-</polygon>
-</signal>
-<signal name="N$32">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="55.2" y="55.9"/>
-<vertex x="55.2" y="54.2"/>
-<vertex x="59.8" y="54.3"/>
-<vertex x="58.2" y="55.9"/>
-</polygon>
-</signal>
-<signal name="N$33">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="52.1" y="45.8"/>
-<vertex x="51" y="43.8"/>
-<vertex x="52.9" y="43.8"/>
-<vertex x="52.9" y="45.7"/>
-</polygon>
-</signal>
-<signal name="N$34">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="56.6" y="47.3"/>
-<vertex x="55.4" y="46.1"/>
-<vertex x="57.4" y="43.9"/>
-<vertex x="58.7" y="45.5"/>
-</polygon>
-</signal>
-<signal name="N$35">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="51.1" y="43.9"/>
-<vertex x="47.9" y="36.3"/>
-<vertex x="52.8" y="36.2"/>
-<vertex x="53" y="43.8"/>
-</polygon>
-</signal>
-<signal name="N$36">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="48.4" y="35"/>
-<vertex x="46.8" y="33.7"/>
-<vertex x="48.1" y="32.8"/>
-<vertex x="49.8" y="34.3"/>
-</polygon>
-</signal>
-<signal name="N$37">
-<polygon width="0.1524" layer="16" pour="cutout">
-<vertex x="55.5" y="26.7"/>
-<vertex x="54.9" y="24.1"/>
-<vertex x="56.7" y="24.2"/>
-<vertex x="57.4" y="25.3"/>
-<vertex x="57.3" y="26.9"/>
-</polygon>
-</signal>
-<signal name="N$38">
-<polygon width="0.4" layer="16" pour="cutout">
-<vertex x="66.3" y="20.5"/>
-<vertex x="66.3" y="15.2"/>
-<vertex x="70.6" y="15.2"/>
-<vertex x="71.8" y="16.4"/>
-<vertex x="71.8" y="23"/>
-<vertex x="69.3" y="23"/>
-<vertex x="69.2" y="22.9"/>
-<vertex x="68.7" y="22.9"/>
-<vertex x="67.8" y="22"/>
-<vertex x="67.8" y="21.2"/>
-<vertex x="67.9" y="21.1"/>
-<vertex x="67.3" y="20.5"/>
-</polygon>
-</signal>
-<signal name="N$39">
-<polygon width="0.4" layer="16" pour="cutout">
-<vertex x="71.8" y="49.4"/>
-<vertex x="71.8" y="50.9"/>
-<vertex x="71.3" y="51.4"/>
-<vertex x="69.9" y="51.4"/>
-<vertex x="69.8" y="51.3"/>
-<vertex x="69.8" y="49.8"/>
-<vertex x="70.2" y="49.4"/>
-</polygon>
-</signal>
 <signal name="N$40">
 <polygon width="0.4" layer="16" pour="cutout">
 <vertex x="76" y="66"/>
-<vertex x="73.6" y="66"/>
-<vertex x="73.6" y="64.5"/>
 <vertex x="75" y="64.5"/>
 <vertex x="76" y="65.5"/>
-</polygon>
-</signal>
-<signal name="N$41">
-<polygon width="0.4" layer="1" pour="cutout">
-<vertex x="30.9" y="51.5"/>
-<vertex x="30.9" y="49.8"/>
-<vertex x="30.8" y="49.7"/>
-<vertex x="34.9" y="49.7"/>
-<vertex x="35.3" y="50.1"/>
-<vertex x="35.3" y="51.4"/>
-<vertex x="31" y="51.4"/>
 </polygon>
 </signal>
 <signal name="N$42">
@@ -3381,24 +3199,6 @@ design rules under a new name.</description>
 <vertex x="44.7" y="48"/>
 <vertex x="44.9" y="48.2"/>
 <vertex x="44.9" y="49.6"/>
-</polygon>
-</signal>
-<signal name="N$43">
-<polygon width="0.4" layer="16" pour="cutout">
-<vertex x="17.1" y="24.2"/>
-<vertex x="17.1" y="22.8"/>
-<vertex x="22.8" y="22.8"/>
-<vertex x="23" y="23"/>
-<vertex x="21.8" y="24.2"/>
-</polygon>
-</signal>
-<signal name="N$25">
-<polygon width="0.4" layer="1" spacing="2.1844" pour="cutout">
-<vertex x="60.3" y="38.7"/>
-<vertex x="60.3" y="37.3"/>
-<vertex x="62.9" y="37.3"/>
-<vertex x="62.9" y="37.9"/>
-<vertex x="62.1" y="38.7"/>
 </polygon>
 </signal>
 </signals>
