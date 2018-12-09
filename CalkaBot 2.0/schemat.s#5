@@ -21145,7 +21145,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <sheet>
 <plain>
 <text x="-147" y="90" size="1.778" layer="91">Oscylator</text>
-<text x="-152.4" y="58.42" size="1.778" layer="91">Usb komunikacja</text>
+<text x="-129.54" y="58.42" size="1.778" layer="91">Usb komunikacja</text>
 <text x="-95.504" y="116.332" size="1.778" layer="91">komunikacja ICSP</text>
 <text x="47.244" y="143.256" size="1.778" layer="91">Bateria</text>
 <text x="50.8" y="152.4" size="6.4516" layer="91">zasilanie</text>
@@ -21502,10 +21502,10 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 </bus>
 <bus name="B$2">
 <segment>
-<wire x1="-162.56" y1="55.88" x2="-162.56" y2="10.16" width="0.762" layer="92"/>
-<wire x1="-162.56" y1="10.16" x2="-86.36" y2="10.16" width="0.762" layer="92"/>
-<wire x1="-86.36" y1="10.16" x2="-86.36" y2="55.88" width="0.762" layer="92"/>
-<wire x1="-86.36" y1="55.88" x2="-162.56" y2="55.88" width="0.762" layer="92"/>
+<wire x1="-132.08" y1="55.88" x2="-132.08" y2="20.32" width="0.762" layer="92"/>
+<wire x1="-132.08" y1="20.32" x2="-86.36" y2="20.32" width="0.762" layer="92"/>
+<wire x1="-86.36" y1="20.32" x2="-86.36" y2="55.88" width="0.762" layer="92"/>
+<wire x1="-86.36" y1="55.88" x2="-132.08" y2="55.88" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="B$4">
@@ -21837,8 +21837,6 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <pinref part="GND21" gate="1" pin="GND"/>
 <wire x1="-116.84" y1="40.64" x2="-104.14" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="-104.14" y1="40.64" x2="-104.14" y2="38.1" width="0.1524" layer="91"/>
-<label x="-134.62" y="38.1" size="1.778" layer="95"/>
-<label x="-134.62" y="40.64" size="1.778" layer="95"/>
 <pinref part="JP2" gate="A" pin="1"/>
 <wire x1="-114.3" y1="38.1" x2="-114.3" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="-114.3" y1="38.1" x2="-104.14" y2="38.1" width="0.1524" layer="91"/>
