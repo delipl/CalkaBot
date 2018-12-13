@@ -20521,6 +20521,66 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 </package>
+<package name="1X03" urn="urn:adsk.eagle:footprint:22340/1" library_version="3">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-3.175" y1="1.27" x2="-1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="1.27" x2="-3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="-0.635" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-1.27" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="1.27" x2="3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="0.635" x2="3.81" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="-0.635" x2="3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="-1.27" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<pad name="1" x="-2.54" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="2" x="0" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="3" x="2.54" y="0" drill="1.016" shape="long" rot="R90"/>
+<text x="-3.8862" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.81" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+<rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
+<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
+</package>
+<package name="1X03/90" urn="urn:adsk.eagle:footprint:22341/1" library_version="3">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-3.81" y1="-1.905" x2="-1.27" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-1.905" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="6.985" x2="-2.54" y2="1.27" width="0.762" layer="21"/>
+<wire x1="-1.27" y1="-1.905" x2="1.27" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-1.905" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="6.985" x2="0" y2="1.27" width="0.762" layer="21"/>
+<wire x1="1.27" y1="-1.905" x2="3.81" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="-1.905" x2="3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="0.635" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="6.985" x2="2.54" y2="1.27" width="0.762" layer="21"/>
+<pad name="1" x="-2.54" y="-3.81" drill="1.016" shape="long" rot="R90"/>
+<pad name="2" x="0" y="-3.81" drill="1.016" shape="long" rot="R90"/>
+<pad name="3" x="2.54" y="-3.81" drill="1.016" shape="long" rot="R90"/>
+<text x="-4.445" y="-3.81" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="5.715" y="-3.81" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-2.921" y1="0.635" x2="-2.159" y2="1.143" layer="21"/>
+<rectangle x1="-0.381" y1="0.635" x2="0.381" y2="1.143" layer="21"/>
+<rectangle x1="2.159" y1="0.635" x2="2.921" y2="1.143" layer="21"/>
+<rectangle x1="-2.921" y1="-2.921" x2="-2.159" y2="-1.905" layer="21"/>
+<rectangle x1="-0.381" y1="-2.921" x2="0.381" y2="-1.905" layer="21"/>
+<rectangle x1="2.159" y1="-2.921" x2="2.921" y2="-1.905" layer="21"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="1X02" urn="urn:adsk.eagle:package:22435/2" type="model" library_version="3">
@@ -20545,6 +20605,18 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <description>PIN HEADER</description>
 <packageinstances>
 <packageinstance name="1X01"/>
+</packageinstances>
+</package3d>
+<package3d name="1X03" urn="urn:adsk.eagle:package:22458/2" type="model" library_version="3">
+<description>PIN HEADER</description>
+<packageinstances>
+<packageinstance name="1X03"/>
+</packageinstances>
+</package3d>
+<package3d name="1X03/90" urn="urn:adsk.eagle:package:22459/2" type="model" library_version="3">
+<description>PIN HEADER</description>
+<packageinstances>
+<packageinstance name="1X03/90"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -20581,6 +20653,17 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <text x="-6.35" y="3.175" size="1.778" layer="95">&gt;NAME</text>
 <text x="-6.35" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="1" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
+</symbol>
+<symbol name="PINHD3" urn="urn:adsk.eagle:symbol:22339/1" library_version="3">
+<wire x1="-6.35" y1="-5.08" x2="1.27" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-5.08" x2="1.27" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="5.08" x2="-6.35" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="5.08" x2="-6.35" y2="-5.08" width="0.4064" layer="94"/>
+<text x="-6.35" y="5.715" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="2" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="3" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -20668,6 +20751,40 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:22485/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PINHD-1X3" urn="urn:adsk.eagle:component:22524/3" prefix="JP" uservalue="yes" library_version="3">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<gates>
+<gate name="A" symbol="PINHD3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1X03">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+<connect gate="A" pin="3" pad="3"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:22458/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="/90" package="1X03/90">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+<connect gate="A" pin="3" pad="3"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:22459/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -21639,6 +21756,13 @@ Source: www.cypressindustries.com</description>
 <part name="R24" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="220R"/>
 <part name="L7" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2"/>
 <part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
+<part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
+<part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
+<part name="JP4" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
+<part name="JP5" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
+<part name="JP6" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
+<part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -21649,6 +21773,7 @@ Source: www.cypressindustries.com</description>
 <text x="47.244" y="143.256" size="1.778" layer="91">Bateria</text>
 <text x="50.8" y="152.4" size="6.4516" layer="91">zasilanie</text>
 <text x="-33.02" y="170.18" size="1.778" layer="91">Dioda w pionie cyfrowym</text>
+<text x="99.06" y="33.02" size="1.778" layer="91">Czujniki odległości</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="92" y="64" smashed="yes">
@@ -22042,6 +22167,33 @@ Source: www.cypressindustries.com</description>
 <instance part="GND24" gate="1" x="-10.16" y="147.32" smashed="yes">
 <attribute name="VALUE" x="-12.7" y="144.78" size="1.778" layer="96"/>
 </instance>
+<instance part="JP1" gate="A" x="93.98" y="15.24" smashed="yes" rot="R90">
+<attribute name="NAME" x="88.265" y="8.89" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="101.6" y="8.89" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="JP2" gate="A" x="93.98" y="7.62" smashed="yes" rot="R90">
+<attribute name="NAME" x="88.265" y="1.27" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="101.6" y="1.27" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="JP3" gate="A" x="93.98" y="0" smashed="yes" rot="R90">
+<attribute name="NAME" x="88.265" y="-6.35" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="101.6" y="-6.35" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="JP4" gate="A" x="116.84" y="15.24" smashed="yes" rot="R90">
+<attribute name="NAME" x="111.125" y="8.89" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="124.46" y="8.89" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="JP5" gate="A" x="116.84" y="7.62" smashed="yes" rot="R90">
+<attribute name="NAME" x="111.125" y="1.27" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="124.46" y="1.27" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="JP6" gate="A" x="116.84" y="0" smashed="yes" rot="R90">
+<attribute name="NAME" x="111.125" y="-6.35" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="124.46" y="-6.35" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND25" gate="1" x="127" y="17.78" smashed="yes">
+<attribute name="VALUE" x="124.46" y="15.24" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 <bus name="B$1">
@@ -22098,6 +22250,14 @@ Source: www.cypressindustries.com</description>
 <wire x1="-43.18" y1="119.38" x2="0" y2="119.38" width="0.762" layer="92" style="shortdash"/>
 <wire x1="0" y1="119.38" x2="0" y2="167.64" width="0.762" layer="92" style="shortdash"/>
 <wire x1="0" y1="167.64" x2="-43.18" y2="167.64" width="0.762" layer="92" style="shortdash"/>
+</segment>
+</bus>
+<bus name="B$8">
+<segment>
+<wire x1="73.66" y1="30.48" x2="73.66" y2="-12.7" width="0.762" layer="92" style="dashdot"/>
+<wire x1="73.66" y1="-12.7" x2="142.24" y2="-12.7" width="0.762" layer="92" style="dashdot"/>
+<wire x1="142.24" y1="-12.7" x2="142.24" y2="30.48" width="0.762" layer="92" style="dashdot"/>
+<wire x1="142.24" y1="30.48" x2="73.66" y2="30.48" width="0.762" layer="92" style="dashdot"/>
 </segment>
 </bus>
 </busses>
@@ -22428,6 +22588,31 @@ Source: www.cypressindustries.com</description>
 <pinref part="GND24" gate="1" pin="GND"/>
 <wire x1="-10.82" y1="154.42" x2="-10.16" y2="154.42" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="154.42" x2="-10.16" y2="149.86" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="A" pin="3"/>
+<pinref part="JP5" gate="A" pin="3"/>
+<wire x1="119.38" y1="-2.54" x2="119.38" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="JP4" gate="A" pin="3"/>
+<wire x1="119.38" y1="5.08" x2="119.38" y2="12.7" width="0.1524" layer="91"/>
+<junction x="119.38" y="5.08"/>
+<wire x1="119.38" y1="12.7" x2="119.38" y2="20.32" width="0.1524" layer="91"/>
+<junction x="119.38" y="12.7"/>
+<wire x1="119.38" y1="12.7" x2="119.38" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="22.86" x2="127" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="127" y1="22.86" x2="127" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="GND25" gate="1" pin="GND"/>
+<pinref part="JP3" gate="A" pin="3"/>
+<pinref part="JP2" gate="A" pin="3"/>
+<wire x1="96.52" y1="-2.54" x2="96.52" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="A" pin="3"/>
+<wire x1="96.52" y1="5.08" x2="96.52" y2="12.7" width="0.1524" layer="91"/>
+<junction x="96.52" y="5.08"/>
+<wire x1="96.52" y1="12.7" x2="96.52" y2="20.32" width="0.1524" layer="91"/>
+<junction x="96.52" y="12.7"/>
+<wire x1="96.52" y1="12.7" x2="96.52" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="22.86" x2="119.38" y2="22.86" width="0.1524" layer="91"/>
+<junction x="119.38" y="22.86"/>
 </segment>
 </net>
 <net name="D-" class="0">
@@ -22820,6 +23005,31 @@ Source: www.cypressindustries.com</description>
 <junction x="-73.66" y="86.36"/>
 <label x="-73.66" y="86.36" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="JP4" gate="A" pin="2"/>
+<wire x1="116.84" y1="12.7" x2="116.84" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="JP5" gate="A" pin="2"/>
+<wire x1="116.84" y1="12.7" x2="116.84" y2="5.08" width="0.1524" layer="91"/>
+<junction x="116.84" y="12.7"/>
+<pinref part="JP6" gate="A" pin="2"/>
+<wire x1="116.84" y1="-2.54" x2="116.84" y2="5.08" width="0.1524" layer="91"/>
+<junction x="116.84" y="5.08"/>
+<wire x1="116.84" y1="12.7" x2="116.84" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="25.4" x2="129.54" y2="25.4" width="0.1524" layer="91"/>
+<junction x="132.08" y="25.4"/>
+<label x="132.08" y="25.4" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="2"/>
+<pinref part="JP2" gate="A" pin="2"/>
+<wire x1="129.54" y1="25.4" x2="132.08" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="12.7" x2="93.98" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="A" pin="2"/>
+<wire x1="93.98" y1="5.08" x2="93.98" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="93.98" y="5.08"/>
+<wire x1="93.98" y1="12.7" x2="93.98" y2="20.32" width="0.1524" layer="91"/>
+<junction x="93.98" y="12.7"/>
+<wire x1="93.98" y1="12.7" x2="93.98" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="25.4" x2="116.84" y2="25.4" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="BIN1" class="0">
 <segment>
@@ -23128,6 +23338,12 @@ Source: www.cypressindustries.com</description>
 <junction x="21.8" y="41.9"/>
 <label x="25.2" y="41.8" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="JP6" gate="A" pin="1"/>
+<wire x1="114.3" y1="-2.54" x2="106.68" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="106.68" y="-2.54"/>
+<label x="106.68" y="-2.54" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="I/O8" class="0">
 <segment>
@@ -23137,6 +23353,12 @@ Source: www.cypressindustries.com</description>
 <junction x="21.9" y="44.3"/>
 <label x="24.9" y="44.3" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="JP5" gate="A" pin="1"/>
+<wire x1="114.3" y1="5.08" x2="106.68" y2="5.08" width="0.1524" layer="91"/>
+<junction x="106.68" y="5.08"/>
+<label x="106.68" y="5.08" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="I/O7" class="0">
 <segment>
@@ -23145,6 +23367,12 @@ Source: www.cypressindustries.com</description>
 <wire x1="21.16" y1="46.76" x2="21.3" y2="46.9" width="0.1524" layer="91"/>
 <junction x="21.3" y="46.9"/>
 <label x="24.5" y="46.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP4" gate="A" pin="1"/>
+<wire x1="114.3" y1="12.7" x2="106.68" y2="12.7" width="0.1524" layer="91"/>
+<junction x="106.68" y="12.7"/>
+<label x="106.68" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VM" class="0">
@@ -23295,6 +23523,12 @@ Source: www.cypressindustries.com</description>
 <junction x="22.86" y="99.06"/>
 <label x="22.86" y="99.06" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="JP1" gate="A" pin="1"/>
+<wire x1="91.44" y1="12.7" x2="81.28" y2="12.7" width="0.1524" layer="91"/>
+<junction x="81.28" y="12.7"/>
+<label x="81.28" y="12.7" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="I/O5" class="0">
 <segment>
@@ -23304,6 +23538,12 @@ Source: www.cypressindustries.com</description>
 <junction x="22.86" y="96.52"/>
 <label x="22.86" y="96.52" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="JP2" gate="A" pin="1"/>
+<wire x1="91.44" y1="5.08" x2="81.28" y2="5.08" width="0.1524" layer="91"/>
+<junction x="81.28" y="5.08"/>
+<label x="81.28" y="5.08" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="I/O6" class="0">
 <segment>
@@ -23312,6 +23552,12 @@ Source: www.cypressindustries.com</description>
 <wire x1="22.86" y1="92.48" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
 <junction x="22.86" y="93.98"/>
 <label x="22.86" y="93.98" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP3" gate="A" pin="1"/>
+<wire x1="91.44" y1="-2.54" x2="81.28" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="81.28" y="-2.54"/>
+<label x="81.28" y="-2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="I/O10" class="0">

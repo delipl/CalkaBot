@@ -21385,6 +21385,93 @@ Source: www.cypressindustries.com</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="ktir0711s">
+<packages>
+<package name="TOP">
+<wire x1="-1.35" y1="1.7" x2="-1.35" y2="-1.2" width="0.127" layer="21"/>
+<wire x1="-1.35" y1="-1.2" x2="-0.85" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="-0.85" y1="-1.7" x2="1.35" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="1.35" y1="-1.7" x2="1.35" y2="1.7" width="0.127" layer="21"/>
+<wire x1="1.35" y1="1.7" x2="-1.35" y2="1.7" width="0.127" layer="21"/>
+<wire x1="-0.9" y1="-0.2" x2="0.9" y2="-0.2" width="0.127" layer="21"/>
+<wire x1="0.9" y1="-0.2" x2="0.9" y2="-1.3" width="0.127" layer="21"/>
+<wire x1="0.9" y1="-1.3" x2="-0.9" y2="-1.3" width="0.127" layer="21"/>
+<wire x1="-0.9" y1="1.3" x2="0.9" y2="1.3" width="0.127" layer="21"/>
+<wire x1="0.9" y1="0.2" x2="-0.9" y2="0.2" width="0.127" layer="21"/>
+<wire x1="-0.9" y1="-1.3" x2="-0.9" y2="-0.2" width="0.127" layer="21"/>
+<wire x1="-0.9" y1="0.2" x2="-0.9" y2="1.3" width="0.127" layer="21"/>
+<wire x1="0.9" y1="1.3" x2="0.9" y2="0.2" width="0.127" layer="21"/>
+<smd name="EMITER" x="-1.985" y="0.9" dx="1.27" dy="1" layer="1"/>
+<smd name="ANODA" x="-1.985" y="-0.9" dx="1.27" dy="1" layer="1"/>
+<smd name="KOLEKTOR" x="1.985" y="0.91" dx="1.27" dy="1" layer="1"/>
+<smd name="KATODA" x="1.985" y="-0.9" dx="1.27" dy="1" layer="1"/>
+<text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="SYM">
+<wire x1="-1.143" y1="-1.143" x2="0.254" y2="0.254" width="0.1524" layer="94"/>
+<wire x1="0.254" y1="0.254" x2="-0.635" y2="-0.127" width="0.1524" layer="94"/>
+<wire x1="-0.635" y1="-0.127" x2="-0.127" y2="-0.635" width="0.1524" layer="94"/>
+<wire x1="-0.127" y1="-0.635" x2="0.254" y2="0.254" width="0.1524" layer="94"/>
+<wire x1="0.127" y1="1.397" x2="-0.762" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="1.016" x2="-0.254" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="0.508" x2="0.127" y2="1.397" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="0.127" y2="1.397" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="1.27" x2="-3.175" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="-1.27" x2="-3.175" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.27" x2="-4.445" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="1.27" x2="-3.175" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.27" x2="-3.175" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.27" x2="-4.445" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-5.715" y1="5.08" x2="5.715" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-5.715" y1="-5.08" x2="5.715" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="-3.175" y1="2.54" x2="-3.175" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-5.715" y1="5.08" x2="-5.715" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="-3.175" y1="-1.27" x2="-3.175" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="5.715" y1="5.08" x2="5.715" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="-3.175" y1="2.54" x2="-6.35" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-3.175" y1="-2.54" x2="-6.35" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="-2.54" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="3.556" y2="2.286" width="0.1524" layer="94"/>
+<wire x1="3.048" y1="1.016" x2="3.556" y2="2.286" width="0.1524" layer="94"/>
+<wire x1="3.556" y1="2.286" x2="3.81" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="3.556" y1="2.286" x2="2.286" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="2.286" y1="1.778" x2="3.048" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="-3.175" y1="-1.27" x2="-4.445" y2="1.27" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="3.81" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="3.81" y2="2.54" width="0.1524" layer="94"/>
+<text x="-5.715" y="5.715" size="1.778" layer="95">&gt;NAME</text>
+<text x="-5.715" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="0.889" y1="-2.54" x2="1.651" y2="2.54" layer="94"/>
+<pin name="KOLEKTOR" x="7.62" y="-2.54" visible="off" length="short" rot="R180"/>
+<pin name="KATODA" x="-7.62" y="-2.54" visible="off" length="short" direction="pas"/>
+<pin name="ANODA" x="-7.62" y="2.54" visible="off" length="short" direction="pas"/>
+<pin name="EMITER" x="7.62" y="2.54" visible="off" length="short" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="KTIR0711S" prefix="CZ">
+<gates>
+<gate name="G$1" symbol="SYM" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TOP">
+<connects>
+<connect gate="G$1" pin="ANODA" pad="ANODA"/>
+<connect gate="G$1" pin="EMITER" pad="EMITER"/>
+<connect gate="G$1" pin="KATODA" pad="KATODA"/>
+<connect gate="G$1" pin="KOLEKTOR" pad="KOLEKTOR"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -21492,6 +21579,10 @@ Source: www.cypressindustries.com</description>
 <part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X3" device="" package3d_urn="urn:adsk.eagle:package:22462/2"/>
 <part name="X1" library="con-cypressindustries" library_urn="urn:adsk.eagle:library:138" deviceset="MINI-USB_4P-" device="85-32004-40X" package3d_urn="urn:adsk.eagle:package:6444/1"/>
+<part name="CZ1" library="ktir0711s" deviceset="KTIR0711S" device=""/>
+<part name="CZ2" library="ktir0711s" deviceset="KTIR0711S" device=""/>
+<part name="CZ3" library="ktir0711s" deviceset="KTIR0711S" device=""/>
+<part name="CZ4" library="ktir0711s" deviceset="KTIR0711S" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -21852,6 +21943,22 @@ Source: www.cypressindustries.com</description>
 <instance part="X1" gate="G$1" x="-121.92" y="30.48" smashed="yes" rot="R270">
 <attribute name="VALUE" x="-127" y="20.32" size="1.778" layer="96"/>
 </instance>
+<instance part="CZ1" gate="G$1" x="185.42" y="106.68" smashed="yes">
+<attribute name="NAME" x="179.705" y="112.395" size="1.778" layer="95"/>
+<attribute name="VALUE" x="179.705" y="99.06" size="1.778" layer="96"/>
+</instance>
+<instance part="CZ2" gate="G$1" x="185.42" y="68.58" smashed="yes">
+<attribute name="NAME" x="179.705" y="74.295" size="1.778" layer="95"/>
+<attribute name="VALUE" x="179.705" y="60.96" size="1.778" layer="96"/>
+</instance>
+<instance part="CZ3" gate="G$1" x="193.04" y="33.02" smashed="yes">
+<attribute name="NAME" x="187.325" y="38.735" size="1.778" layer="95"/>
+<attribute name="VALUE" x="187.325" y="25.4" size="1.778" layer="96"/>
+</instance>
+<instance part="CZ4" gate="G$1" x="187.96" y="-7.62" smashed="yes">
+<attribute name="NAME" x="182.245" y="-1.905" size="1.778" layer="95"/>
+<attribute name="VALUE" x="182.245" y="-15.24" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 <bus name="B$1">
@@ -22068,46 +22175,6 @@ Source: www.cypressindustries.com</description>
 <wire x1="191.38" y1="86.74" x2="191.5" y2="86.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="177.44" y1="104.56" x2="173.6" y2="104.56" width="0.1524" layer="91"/>
-<wire x1="173.6" y1="104.56" x2="173.6" y2="103.34" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="195.22" y1="104.56" x2="196.7" y2="104.56" width="0.1524" layer="91"/>
-<wire x1="196.7" y1="104.56" x2="196.7" y2="103.64" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="177.74" y1="66.66" x2="173.9" y2="66.66" width="0.1524" layer="91"/>
-<wire x1="173.9" y1="66.66" x2="173.9" y2="65.44" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="195.52" y1="66.66" x2="197" y2="66.66" width="0.1524" layer="91"/>
-<wire x1="197" y1="66.66" x2="197" y2="65.74" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="183.44" y1="30.36" x2="179.6" y2="30.36" width="0.1524" layer="91"/>
-<wire x1="179.6" y1="30.36" x2="179.6" y2="29.14" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND9" gate="1" pin="GND"/>
-<wire x1="201.22" y1="30.36" x2="202.7" y2="30.36" width="0.1524" layer="91"/>
-<wire x1="202.7" y1="30.36" x2="202.7" y2="29.44" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND11" gate="1" pin="GND"/>
-<wire x1="179.64" y1="-10.14" x2="175.8" y2="-10.14" width="0.1524" layer="91"/>
-<wire x1="175.8" y1="-10.14" x2="175.8" y2="-11.36" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND12" gate="1" pin="GND"/>
-<wire x1="197.42" y1="-10.14" x2="198.9" y2="-10.14" width="0.1524" layer="91"/>
-<wire x1="198.9" y1="-10.14" x2="198.9" y2="-11.06" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <wire x1="74.168" y1="74.168" x2="70.866" y2="74.168" width="0.1524" layer="91"/>
 <wire x1="70.866" y1="74.168" x2="70.866" y2="72.39" width="0.1524" layer="91"/>
 <wire x1="74.168" y1="76.708" x2="70.866" y2="76.708" width="0.1524" layer="91"/>
@@ -22224,6 +22291,54 @@ Source: www.cypressindustries.com</description>
 <wire x1="-124.46" y1="35.56" x2="-124.46" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="-124.46" y1="38.1" x2="-106.68" y2="38.1" width="0.1524" layer="91"/>
 <junction x="-106.68" y="38.1"/>
+</segment>
+<segment>
+<pinref part="CZ1" gate="G$1" pin="EMITER"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="193.04" y1="109.22" x2="196.7" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="196.7" y1="109.22" x2="196.7" y2="103.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND2" gate="1" pin="GND"/>
+<pinref part="CZ1" gate="G$1" pin="KATODA"/>
+<wire x1="173.6" y1="103.34" x2="173.6" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="173.6" y1="104.14" x2="177.8" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND5" gate="1" pin="GND"/>
+<pinref part="CZ2" gate="G$1" pin="KATODA"/>
+<wire x1="173.9" y1="65.44" x2="173.9" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="173.9" y1="66.04" x2="177.8" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="CZ2" gate="G$1" pin="EMITER"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="193.04" y1="71.12" x2="197" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="197" y1="71.12" x2="197" y2="65.74" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND8" gate="1" pin="GND"/>
+<pinref part="CZ3" gate="G$1" pin="KATODA"/>
+<wire x1="179.6" y1="29.14" x2="179.6" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="179.6" y1="30.48" x2="185.42" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="CZ3" gate="G$1" pin="EMITER"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+<wire x1="200.66" y1="35.56" x2="202.7" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="202.7" y1="35.56" x2="202.7" y2="29.44" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND11" gate="1" pin="GND"/>
+<pinref part="CZ4" gate="G$1" pin="KATODA"/>
+<wire x1="175.8" y1="-11.36" x2="175.8" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="175.8" y1="-10.16" x2="180.34" y2="-10.16" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="CZ4" gate="G$1" pin="EMITER"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+<wire x1="195.58" y1="-5.08" x2="198.9" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="198.9" y1="-5.08" x2="198.9" y2="-11.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D-" class="0">
@@ -22679,7 +22794,10 @@ Source: www.cypressindustries.com</description>
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="176.318" y1="109.648" x2="176.318" y2="109.64" width="0.1524" layer="91"/>
-<wire x1="176.318" y1="109.64" x2="177.44" y2="109.64" width="0.1524" layer="91"/>
+<pinref part="CZ1" gate="G$1" pin="ANODA"/>
+<wire x1="177.8" y1="109.22" x2="177.8" y2="109.648" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="109.648" x2="176.318" y2="109.648" width="0.1524" layer="91"/>
+<junction x="176.318" y="109.648"/>
 </segment>
 </net>
 <net name="S1" class="0">
@@ -22688,10 +22806,12 @@ Source: www.cypressindustries.com</description>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="212.88" y1="110.04" x2="210.148" y2="110.04" width="0.1524" layer="91"/>
 <wire x1="210.148" y1="110.04" x2="210.148" y2="109.982" width="0.1524" layer="91"/>
-<wire x1="195.22" y1="109.64" x2="210.148" y2="109.64" width="0.1524" layer="91"/>
 <wire x1="210.148" y1="109.64" x2="210.148" y2="109.982" width="0.1524" layer="91"/>
 <junction x="210.148" y="109.982"/>
 <label x="190.5" y="109.22" size="1.778" layer="95"/>
+<pinref part="CZ1" gate="G$1" pin="KOLEKTOR"/>
+<wire x1="193.04" y1="104.14" x2="193.04" y2="109.982" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="109.982" x2="210.148" y2="109.982" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FL1" class="0">
@@ -22718,16 +22838,14 @@ Source: www.cypressindustries.com</description>
 <label x="25.4" y="34.3" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$18" class="0">
-<segment>
-<wire x1="198.3" y1="66.242" x2="198.248" y2="66.242" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$19" class="0">
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="176.618" y1="71.748" x2="176.618" y2="71.74" width="0.1524" layer="91"/>
-<wire x1="176.618" y1="71.74" x2="177.74" y2="71.74" width="0.1524" layer="91"/>
+<pinref part="CZ2" gate="G$1" pin="ANODA"/>
+<wire x1="176.618" y1="71.748" x2="176.618" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="176.618" y1="71.12" x2="177.8" y2="71.12" width="0.1524" layer="91"/>
+<junction x="176.618" y="71.748"/>
 </segment>
 </net>
 <net name="S2" class="0">
@@ -22735,13 +22853,15 @@ Source: www.cypressindustries.com</description>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="213.18" y1="72.14" x2="210.448" y2="72.14" width="0.1524" layer="91"/>
 <wire x1="210.448" y1="72.14" x2="210.448" y2="72.082" width="0.1524" layer="91"/>
-<wire x1="195.52" y1="71.74" x2="210.448" y2="71.74" width="0.1524" layer="91"/>
 <wire x1="210.448" y1="71.74" x2="210.448" y2="72.082" width="0.1524" layer="91"/>
 <junction x="210.448" y="72.082"/>
 <pinref part="IC2" gate="B" pin="+IN"/>
 <wire x1="210.448" y1="72.082" x2="213.78" y2="72.082" width="0.1524" layer="91"/>
 <wire x1="213.78" y1="72.082" x2="213.78" y2="72.24" width="0.1524" layer="91"/>
 <label x="190.5" y="71.12" size="1.778" layer="95"/>
+<pinref part="CZ2" gate="G$1" pin="KOLEKTOR"/>
+<wire x1="193.04" y1="66.04" x2="193.04" y2="72.082" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="72.082" x2="210.448" y2="72.082" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -22753,21 +22873,25 @@ Source: www.cypressindustries.com</description>
 <segment>
 <pinref part="R11" gate="G$1" pin="1"/>
 <wire x1="182.318" y1="35.448" x2="182.318" y2="35.44" width="0.1524" layer="91"/>
-<wire x1="182.318" y1="35.44" x2="183.44" y2="35.44" width="0.1524" layer="91"/>
+<pinref part="CZ3" gate="G$1" pin="ANODA"/>
+<wire x1="182.318" y1="35.448" x2="182.318" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="182.318" y1="35.56" x2="185.42" y2="35.56" width="0.1524" layer="91"/>
+<junction x="182.318" y="35.448"/>
 </segment>
 </net>
 <net name="S3" class="0">
 <segment>
 <pinref part="R10" gate="G$1" pin="1"/>
-<wire x1="218.88" y1="35.84" x2="216.148" y2="35.84" width="0.1524" layer="91"/>
 <wire x1="216.148" y1="35.84" x2="216.148" y2="35.782" width="0.1524" layer="91"/>
-<wire x1="201.22" y1="35.44" x2="216.148" y2="35.44" width="0.1524" layer="91"/>
 <wire x1="216.148" y1="35.44" x2="216.148" y2="35.782" width="0.1524" layer="91"/>
 <junction x="216.148" y="35.782"/>
 <pinref part="IC2" gate="C" pin="+IN"/>
 <wire x1="216.148" y1="35.782" x2="216.148" y2="36.34" width="0.1524" layer="91"/>
 <wire x1="216.148" y1="36.34" x2="219.38" y2="36.34" width="0.1524" layer="91"/>
 <label x="198.12" y="35.56" size="1.778" layer="95"/>
+<pinref part="CZ3" gate="G$1" pin="KOLEKTOR"/>
+<wire x1="200.66" y1="30.48" x2="200.66" y2="35.782" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="35.782" x2="216.148" y2="35.782" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$26" class="0">
@@ -22779,7 +22903,10 @@ Source: www.cypressindustries.com</description>
 <segment>
 <pinref part="R14" gate="G$1" pin="1"/>
 <wire x1="178.518" y1="-5.052" x2="178.518" y2="-5.06" width="0.1524" layer="91"/>
-<wire x1="178.518" y1="-5.06" x2="179.64" y2="-5.06" width="0.1524" layer="91"/>
+<pinref part="CZ4" gate="G$1" pin="ANODA"/>
+<wire x1="178.518" y1="-5.052" x2="178.518" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="178.518" y1="-5.08" x2="180.34" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="178.518" y="-5.052"/>
 </segment>
 </net>
 <net name="S4" class="0">
@@ -22787,13 +22914,15 @@ Source: www.cypressindustries.com</description>
 <pinref part="R13" gate="G$1" pin="1"/>
 <wire x1="215.08" y1="-4.66" x2="212.348" y2="-4.66" width="0.1524" layer="91"/>
 <wire x1="212.348" y1="-4.66" x2="212.348" y2="-4.718" width="0.1524" layer="91"/>
-<wire x1="197.42" y1="-5.06" x2="212.348" y2="-5.06" width="0.1524" layer="91"/>
 <wire x1="212.348" y1="-5.06" x2="212.348" y2="-4.718" width="0.1524" layer="91"/>
 <junction x="212.348" y="-4.718"/>
 <pinref part="IC2" gate="D" pin="+IN"/>
 <wire x1="212.348" y1="-4.718" x2="215.58" y2="-4.718" width="0.1524" layer="91"/>
 <wire x1="215.58" y1="-4.718" x2="215.58" y2="-4.66" width="0.1524" layer="91"/>
 <label x="193.04" y="-5.08" size="1.778" layer="95"/>
+<pinref part="CZ4" gate="G$1" pin="KOLEKTOR"/>
+<wire x1="195.58" y1="-10.16" x2="195.58" y2="-4.718" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="-4.718" x2="212.348" y2="-4.718" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FL4" class="0">
