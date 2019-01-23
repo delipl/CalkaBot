@@ -144,10 +144,10 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="0" y2="100" width="0" layer="20"/>
-<wire x1="0" y1="100" x2="95.9" y2="99.8" width="0" layer="20"/>
-<wire x1="95.9" y1="99.8" x2="95.9" y2="-0.2" width="0" layer="20"/>
-<wire x1="95.9" y1="-0.2" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="0" y1="-4.9" x2="0.1" y2="95.2" width="0" layer="20"/>
+<wire x1="0.1" y1="95.2" x2="96" y2="95" width="0" layer="20"/>
+<wire x1="96" y1="95" x2="96" y2="-5" width="0" layer="20"/>
+<wire x1="96" y1="-5" x2="0" y2="-4.9" width="0" layer="20"/>
 <polygon width="0.254" layer="203">
 <vertex x="100" y="0"/>
 <vertex x="98" y="0"/>
