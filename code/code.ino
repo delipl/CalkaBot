@@ -1,9 +1,9 @@
 
 //control motor 2 PB
-	#define goFowardA  		0b010000;
-	#define goBackwardA  	0b100000;
-	#define slowStopA		0b000000;
-	#define hardStopA		0b110000;
+	#define goFowardA  		0x10  //0b01 0000; 
+	#define goBackwardA  	0x20  //0b10 0000; 
+	#define slowStopA		  0x00  //0b00 0000; 
+	#define hardStopA		  0x30  //0b11 0000; 
 
 
 
@@ -12,11 +12,11 @@ void setup(){
  
 	//===[pinMode]=====
   	//       76543210
-	DDRB = 0b01110000;
-	DDRC = 0b11000000;
-	DDRD = 0b10000000;
-	DDRE = 0b01000100;
-	DDRF = 0b00000000;
+	DDRB = 0x70;      //0b0111 0000;
+	DDRC = 0xC0;      //0b1100 0000;
+	DDRD = 0x80;      //0b1000 0000;
+	DDRE = 0x44;      //0b0100 0100;
+	DDRF = 0x00;      //0b0000 0000;
 	//=================
 
 	
