@@ -1,53 +1,3 @@
-Pinout Atmega32u4:
-
-| **Pin** | **Arduino**    | **Function**   | **Code** |**C Port**|
-| :------:|:-------------: | :-------------:|:--------:|:--------:|
-|   1     | digital pin 7  | built in LED   | builtLed1|	PE6   |
-|   2     | 	VCC 	   | voltage supply |   HIGH   |	 -    |
-|   3     | D-             | USB data   	|   ---    |	 -    |
-|   4     | D+             | USB data   	|   ---	   |	 -    |
-|   5     | 	GND  	   | ground			| 	LOW	   |	 -    |
-|   6     | 	Cap  	   | USB capacotor	| 	---	   |	 -    |
-|   7     | 	VCC 	   | voltage supply |   HIGH   |	 -    |
-|   8     | 	rxLed  	   | empty 1\0 pin	| 	---    |	PB0   |
-|   9     | 	SCK  	   | ICSP			| 	SCK	   |	PB1   |
-|   10    | 	MOSI 	   | ICSP		    | 	MOSI   |	PB2   |
-|   11    | 	MISO 	   | ICSP		    | 	MISO   |	PB3   |
-|   12    | digital pin 11 | unplugged	  	| 	---	   |	PB7   |
-|   13    | 	RST	   	   | reset		    | 	RST    |	 -    |
-|   14    | 	VCC 	   | voltage supply |   HIGH   |	 -    |
-|   15    | 	GND  	   | ground			| 	LOW	   |	 -    |
-|   16    | 	XTAL1 	   | oscilator		| 	---    |	 -    |
-|   17    | 	XTAL2	   | oscilator		| 	---    |	 -    |
-|   18    | digital pin 3  | floor sensor  	| 	FaR	   |	PD0   |
-|   19    | digital pin 2  | floor sensor  	| 	FaL	   |	PD1   |
-|   20    | digital pin 0  | floor sensor  	| 	FbL	   |	PD2   |
-|   21    | digital pin 1  | floor sensor  	| 	FbR	   |	PD3   |
-|   22    | 	txLED 	   | distans sensor	|   IRbR   |	PD5   |
-|   23    | 	GND  	   | ground			| 	LOW	   |	 -    |
-|   24    |		VCC 	   | voltage supply |   HIGH   |	 -    |
-|   25    | digital pin 4  | distans sensor	| 	IRb    |	PD4   |
-|   26    | digital pin 12 | distans sensor	| 	IRbL   |	PD6   |
-|   27    | digital pin 6  | motor PWM   	| 	MaPWM  |	PD7   |
-|   28    | digital pin 8  | motor control	| 	Ma2    |	PB4   |
-|   29    | digital pin 9  | motor control	| 	Ma1    |	PB5   |
-|   30    | digital pin 10 | motor control	| 	Mb1    |	PB6   |
-|   31    | digital pin 5  | motor control	| 	Mb2    |	PC6   |
-|   32    | digital pin 13 | distans sensor	| 	MbPWM  |	PC7   |
-|   33    | 	HWB 	   | built in LED   | builtLed2| 	PE2   |
-|   34    | 	VCC 	   | voltage supply |   HIGH   | 	 -    |
-|   35    | 	GND  	   | ground			| 	LOW	   | 	 -    |
-|   36    |    analog 0    | distans sensor | 	IRaL   | 	PF7   |
-|   37    |    analog 1    | distans sensor	| 	IRa	   | 	PF6   |
-|   38    |    analog 2    | distans sensor	| 	IRaR   | 	PF5   |
-|   39    |    analog 3    | button      	| 	but1   | 	PF4   |
-|   40    |    analog 4    | button      	| 	but2   | 	PF1   |
-|   41    |    analog 5    | button      	| 	but3   | 	PF0   |
-|   42    | 	VCC 	   | voltage supply |   HIGH   | 	 -    |
-|   43    | 	GND  	   | ground			| 	LOW	   | 	 -    |
-|   44    | 	VCC 	   | voltage supply |   HIGH   | 	 -    |
--------------------------------------------------------------------
-
 C PORT pinout:
 
 | **PORT**|**Function**    			   | **Code** | **Pin** |
@@ -146,4 +96,54 @@ Code definitions:
 
 
 
+
+Pinout Atmega32u4:
+
+| **Pin** | **Arduino**    | **Function**   | **Code** |**C Port**|
+| :------:|:-------------: | :-------------:|:--------:|:--------:|
+|   1     | digital pin 7  | built in LED   | builtLed1|	PE6   |
+|   2     | 	VCC 	   | voltage supply |   HIGH   |	 -    |
+|   3     | D-             | USB data   	|   ---    |	 -    |
+|   4     | D+             | USB data   	|   ---	   |	 -    |
+|   5     | 	GND  	   | ground			| 	LOW	   |	 -    |
+|   6     | 	Cap  	   | USB capacotor	| 	---	   |	 -    |
+|   7     | 	VCC 	   | voltage supply |   HIGH   |	 -    |
+|   8     | 	rxLed  	   | empty 1\0 pin	| 	---    |	PB0   |
+|   9     | 	SCK  	   | ICSP			| 	SCK	   |	PB1   |
+|   10    | 	MOSI 	   | ICSP		    | 	MOSI   |	PB2   |
+|   11    | 	MISO 	   | ICSP		    | 	MISO   |	PB3   |
+|   12    | digital pin 11 | unplugged	  	| 	---	   |	PB7   |
+|   13    | 	RST	   	   | reset		    | 	RST    |	 -    |
+|   14    | 	VCC 	   | voltage supply |   HIGH   |	 -    |
+|   15    | 	GND  	   | ground			| 	LOW	   |	 -    |
+|   16    | 	XTAL1 	   | oscilator		| 	---    |	 -    |
+|   17    | 	XTAL2	   | oscilator		| 	---    |	 -    |
+|   18    | digital pin 3  | floor sensor  	| 	FaR	   |	PD0   |
+|   19    | digital pin 2  | floor sensor  	| 	FaL	   |	PD1   |
+|   20    | digital pin 0  | floor sensor  	| 	FbL	   |	PD2   |
+|   21    | digital pin 1  | floor sensor  	| 	FbR	   |	PD3   |
+|   22    | 	txLED 	   | distans sensor	|   IRbR   |	PD5   |
+|   23    | 	GND  	   | ground			| 	LOW	   |	 -    |
+|   24    |		VCC 	   | voltage supply |   HIGH   |	 -    |
+|   25    | digital pin 4  | distans sensor	| 	IRb    |	PD4   |
+|   26    | digital pin 12 | distans sensor	| 	IRbL   |	PD6   |
+|   27    | digital pin 6  | motor PWM   	| 	MaPWM  |	PD7   |
+|   28    | digital pin 8  | motor control	| 	Ma2    |	PB4   |
+|   29    | digital pin 9  | motor control	| 	Ma1    |	PB5   |
+|   30    | digital pin 10 | motor control	| 	Mb1    |	PB6   |
+|   31    | digital pin 5  | motor control	| 	Mb2    |	PC6   |
+|   32    | digital pin 13 | distans sensor	| 	MbPWM  |	PC7   |
+|   33    | 	HWB 	   | built in LED   | builtLed2| 	PE2   |
+|   34    | 	VCC 	   | voltage supply |   HIGH   | 	 -    |
+|   35    | 	GND  	   | ground			| 	LOW	   | 	 -    |
+|   36    |    analog 0    | distans sensor | 	IRaL   | 	PF7   |
+|   37    |    analog 1    | distans sensor	| 	IRa	   | 	PF6   |
+|   38    |    analog 2    | distans sensor	| 	IRaR   | 	PF5   |
+|   39    |    analog 3    | button      	| 	but1   | 	PF4   |
+|   40    |    analog 4    | button      	| 	but2   | 	PF1   |
+|   41    |    analog 5    | button      	| 	but3   | 	PF0   |
+|   42    | 	VCC 	   | voltage supply |   HIGH   | 	 -    |
+|   43    | 	GND  	   | ground			| 	LOW	   | 	 -    |
+|   44    | 	VCC 	   | voltage supply |   HIGH   | 	 -    |
+-------------------------------------------------------------------
 
