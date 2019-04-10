@@ -1,2 +1,7 @@
 schemat.s#*
 schemat.B#*
+.pio
+.pioenvs
+.piolibdeps
+.clang_complete
+.gcc-flags.json
