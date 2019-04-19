@@ -27,13 +27,13 @@ bool direct  = true;
   #define edgeBL    (PIND & FbL)
   #define edgeBR    (PIND & FbR)
 
-  bool foor(){
+  bool floorSensors(){
     return  !edgeA  ||
             !edgeAL ||
             !edgeAR ||
             !edgeB  ||
             !edgeBR ||
-            !edgeBL ||;
+            !edgeBL;
   }
 
   //buttons
@@ -90,7 +90,7 @@ bool direct  = true;
 	#define	MbPWM_ON		PORTC |= MbPWM
 
   //control motors
-  void go(uit8_t x, uint8_t y){
+  void go(uint8_t x, uint8_t y){
     analogWrite(x, MaPWM);
     analogWrite(y, MbPWM);
   	Ma1_OFF;
@@ -99,7 +99,7 @@ bool direct  = true;
   	Mb2_ON;
   }
 
-  void goBack(uit8_t x, uint8_t y){
+  void goBack(uint8_t x, uint8_t y){
     analogWrite(x, MaPWM);
     analogWrite(y, MbPWM);
     Ma1_ON;
@@ -126,7 +126,7 @@ bool direct  = true;
   void pins(){
     //output ports for motor A control
   	DDRD |= MaPWM;
-    DDRB != Ma1 | Ma2;
+    DDRB |= Ma1 | Ma2;
 
     //output ports for motor B control
   	DDRC |= MbPWM | Mb2;

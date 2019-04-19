@@ -30,16 +30,16 @@ void loop(){
 
 	//take a enemy
 	else if(!IRaR){
-		while(IRa || floor())	go(full, 0);
+		while(IRa || floorSensors())	go(full, 0);
 	}
 	else if(!IRaL){
-		while(IRa || floor())	go(0, full);
+		while(IRa || floorSensors())	go(0, full);
 	}
 	else if(!IRbR){
-		while(IRb || floor())	goBack(full, 0);
+		while(IRb || floorSensors())	goBack(full, 0);
 	}
 	else if(!IRbL){
-		while(IRb || floor())	goBack(0, full);
+		while(IRb || floorSensors())	goBack(0, full);
 	}
 	else 										go(full, full);
 }
