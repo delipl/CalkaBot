@@ -41,5 +41,5 @@ void loop(){
 	else if(!IRbL){
 		while(IRb || floorSensors())	goBack(0, full);
 	}
-	else 										go(full, full);
+	//else 										go(full, full);
 }
