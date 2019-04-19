@@ -1,15 +1,19 @@
 #include "header.h"
 
 void setup(){
+	//pin mode
+	pins();
+
 	//turning on boarD
+	builtLed1_ON;
 	for (int i = 0; i < 5; ++i){
 		delay(100);
 		builtLed1_TOG;
     builtLed2_TOG;
 	}
+	builtLed1_OFF;
+	builtLed2_OFF;
 
-//pin mode
-pins();
 
 //start
 go(full, full);
