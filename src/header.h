@@ -91,8 +91,10 @@ bool direct  = true;
 
   //control motors
   void go(uint8_t x, uint8_t y){
-    analogWrite(x, MaPWM);
-    analogWrite(y, MbPWM);
+    /*analogWrite(x, MaPWM);
+    analogWrite(y, MbPWM);*/
+		MaPWM_ON;
+		MbPWM_ON;
   	Ma1_OFF;
   	Ma2_ON;
   	Mb1_OFF;

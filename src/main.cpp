@@ -16,7 +16,7 @@ void setup(){
 
 
 //start
-go(full, full);
+	go(full, full);
 }
 
 void loop(){
@@ -27,7 +27,7 @@ void loop(){
 	else if(!edgeB)					go(full, full);
 	else if(!edgeBL) 				go(full, half);
 	else if(!edgeBR)				go(half, full);
-
+	/*
 	//straight attack
 	else if(!IRa)						go(full, full);
 	else if(!IRb)						goBack(full, full);
@@ -44,6 +44,6 @@ void loop(){
 	}
 	else if(!IRbL){
 		while(IRb || floorSensors())	goBack(0, full);
-	}
+	}*/
 	//else 										go(full, full);
 }
