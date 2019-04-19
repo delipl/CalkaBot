@@ -5,3 +5,4 @@ schemat.B#*
 .piolibdeps
 .clang_complete
 .gcc-flags.json
+platformio.ini

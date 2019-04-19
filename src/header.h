@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-uint8_t full = 255;
-uint8_t half = 255/2;
+uint8_t full = 175;
+uint8_t half = 180;
 bool direct  = true;
 
   //Leds on board
@@ -40,7 +40,6 @@ bool direct  = true;
   #define but1      (1<<PF0)
   #define but2      (1<<PF1)
   #define but3      (1<<PF4)
-
 /*
   #define butConf1    ((PINF & but1) | (PINF & but2) | (PINF & but3))
   #define butConf2    (((PINF & but1) | (PINF & but2)) & (PINF & ~but3))
@@ -50,8 +49,8 @@ bool direct  = true;
   #define butConf6    ((PINF & ~but1) | (PINF & ~but2) | (PINF & but3))
   #define butConf7    ((PINF & ~but1) | (PINF & but2) | (PINF & ~but3))
   #define butConf8    ((PINF & but1) | (PINF & ~but2) | (PINF & but3))
-*/
 
+*/
   //distans Sensors
   #define IRa       (1<<PF6)
   #define IRaR      (1<<PF5)
@@ -91,10 +90,9 @@ bool direct  = true;
 
   //control motors
   void go(uint8_t x, uint8_t y){
-    /*analogWrite(x, MaPWM);
-    analogWrite(y, MbPWM);*/
-		MaPWM_ON;
-		MbPWM_ON;
+		if(x==y && (x!=0 || x!=255)) y --;
+    analogWrite(6, x);
+    analogWrite(13, y);
   	Ma1_OFF;
   	Ma2_ON;
   	Mb1_OFF;
@@ -102,8 +100,9 @@ bool direct  = true;
   }
 
   void goBack(uint8_t x, uint8_t y){
-    analogWrite(x, MaPWM);
-    analogWrite(y, MbPWM);
+		if(x==y && (x!=0 || x!=255)) y --;
+		analogWrite(6, x);
+    analogWrite(13, y);
     Ma1_ON;
   	Ma2_OFF;
   	Mb1_ON;
@@ -127,14 +126,16 @@ bool direct  = true;
   //pins ins and outs
   void pins(){
     //output ports for motor A control
-  	DDRD |= MaPWM;
+  	//DDRD |= MaPWM;
+		pinMode(6, OUTPUT);
     DDRB |= Ma1 | Ma2;
 
     //output ports for motor B control
-  	DDRC |= MbPWM | Mb2;
+  	DDRC |= /*MbPWM |*/ Mb2;
     DDRB |= Mb1;
+		pinMode(13, OUTPUT);
 
-    //output ports for leds
+		//output ports for leds
   	DDRE |= builtLed1 | builtLed2;
 
   	//input ports floor sensor
