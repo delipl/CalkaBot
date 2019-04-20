@@ -1,8 +1,10 @@
 #include <Arduino.h>
 
-uint8_t full = 175;
+uint8_t full = 255;
+uint8_t optimal =200; //max speed, not to fligh away from ring
 uint8_t half = 180;
 bool direct  = true;
+uint8_t program = 0;
 
   //Leds on board
 	#define builtLed1 		(1<<PE2)
