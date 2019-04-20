@@ -125,6 +125,16 @@ uint8_t program = 0;
     Mb2_OFF;
   }
 
+	void error(int x){
+		while(true){
+			for (int i = 0; i < x; ++i){
+				delay(200);
+				builtLed1_TOG;
+			}
+			delay(2000);
+		}
+	}
+
   //pins ins and outs
   void pins(){
     //output ports for motor A control
