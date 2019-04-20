@@ -27,8 +27,9 @@ void setup(){
 
 //start
 //!(PINF & but1) ? full=255 : full=200;
-	goBack(full, full);
+	goBackward(full, full);
 }
+
 
 void loop(){
 
