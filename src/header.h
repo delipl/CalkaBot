@@ -3,7 +3,7 @@
 uint8_t full = 255;
 uint8_t optimal =200; //max speed, not to fligh away from ring
 uint8_t half = 180;
-bool direct  = true;
+bool direction  = true;
 uint8_t program = 0;
 
   //Leds on board
@@ -90,8 +90,27 @@ uint8_t program = 0;
 	#define Mb2_OFF	 		PORTC &= ~Mb2
 	#define	MbPWM_ON		PORTC |= MbPWM
 
+
+	void error(int errorNr){
+		while(true){
+			for (int i = 0; i < errorNr; ++i){
+				delay(200);
+				builtLed1_TOG;
+			}
+			delay(2000);
+		}
+	}
+
+	bool seeEnemie(){
+		//also here we have to put some code :P
+	}
+
+	void togDirection(){
+		direction?direction=0:direction=1;
+	}
+
   //control motors
-  void go(uint8_t x, uint8_t y){
+  void goForward(uint8_t x, uint8_t y){
 		if(x==y && (x!=0 || x!=255)) y --;
     analogWrite(6, x);
     analogWrite(13, y);
@@ -101,7 +120,7 @@ uint8_t program = 0;
   	Mb2_ON;
   }
 
-  void goBack(uint8_t x, uint8_t y){
+  void goBackward(uint8_t x, uint8_t y){
 		if(x==y && (x!=0 || x!=255)) y --;
 		analogWrite(6, x);
     analogWrite(13, y);
@@ -110,6 +129,10 @@ uint8_t program = 0;
   	Mb1_ON;
   	Mb2_OFF;
   }
+
+	void go(uint8_t x, uint8_t y){
+		direction?goForward(x, y):goBackward(x, y);
+	}
 
   void hardStop(){
   	Ma1_ON;
@@ -124,16 +147,6 @@ uint8_t program = 0;
   	Mb1_OFF;
     Mb2_OFF;
   }
-
-	void error(int x){
-		while(true){
-			for (int i = 0; i < x; ++i){
-				delay(200);
-				builtLed1_TOG;
-			}
-			delay(2000);
-		}
-	}
 
   //pins ins and outs
   void pins(){
