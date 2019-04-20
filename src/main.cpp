@@ -29,7 +29,7 @@ void setup(){
 //!(PINF & but1) ? full=255 : full=200;
 	goBack(full, full);
 }
-int p = 0;
+
 void loop(){
 
 	switch(program){
@@ -56,6 +56,9 @@ void loop(){
 			break;
 		case 7:
 			program0();
+			break;
+		default:
+			error(1);
 			break;
 	}
 
