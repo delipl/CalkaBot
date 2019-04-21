@@ -1,7 +1,7 @@
 program0(){
   while(true){
       if(!floorSensors()){
-           if(seeEnemie()){
+           if(seeEnemy()){
               //here we have to put some code :v
            }else{
               go(optimal, optimal);

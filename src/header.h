@@ -3,8 +3,9 @@
 uint8_t full 		= 255;
 uint8_t optimal = 200; //max speed, not to fligh away from ring
 uint8_t half 		= 180;
-bool direction  = true;
 uint8_t program = 0;
+bool direction  = true;
+
 
   //Leds on board
 	#define builtLed1 		(1<<PE2)
@@ -84,73 +85,14 @@ uint8_t program = 0;
 	#define Mb2_OFF	 		PORTC &= ~Mb2
 	#define	MbPWM_ON		PORTC |= MbPWM
 
-
-	void error(int errorNr){
-		while(true){
-			for (int i = 0; i < errorNr; ++i){
-				delay(200);
-				builtLed1_TOG;
-			}
-			delay(2000);
-		}
-	}
-
-	bool seeEnemie(){
-		//also here we have to put some code :P
-	}
-
-	void togDirection(){
-		direction?direction=0:direction=1;
-	}
-
-  //control motors
-  void goForward(uint8_t x, uint8_t y){
-		if(x==y && (x!=0 || x!=255)) y --;
-    analogWrite(6, x);
-    analogWrite(13, y);
-  	Ma1_OFF;
-  	Ma2_ON;
-  	Mb1_OFF;
-  	Mb2_ON;
-  }
-
-  void goBackward(uint8_t x, uint8_t y){
-		if(x==y && (x!=0 || x!=255)) y --;
-		analogWrite(6, x);
-    analogWrite(13, y);
-    Ma1_ON;
-  	Ma2_OFF;
-  	Mb1_ON;
-  	Mb2_OFF;
-  }
-
-	void go(uint8_t x, uint8_t y){
-		direction?goForward(x, y):goBackward(x, y);
-	}
-
-  void hardStop(){
-  	Ma1_ON;
-  	Ma2_ON;
-  	Mb1_ON;
-  	Mb2_ON;
-  }
-
-  void slowStop(){
-  	Ma1_OFF;
-  	Ma2_OFF;
-  	Mb1_OFF;
-    Mb2_OFF;
-  }
-
-  //pins ins and outs
+	//pins ins and outs
   void pins(){
     //output ports for motor A control
-  	//DDRD |= MaPWM;
 		pinMode(6, OUTPUT);
     DDRB |= Ma1 | Ma2;
 
     //output ports for motor B control
-  	DDRC |= /*MbPWM |*/ Mb2;
+  	DDRC |= Mb2;
     DDRB |= Mb1;
 		pinMode(13, OUTPUT);
 
@@ -170,8 +112,18 @@ uint8_t program = 0;
     //input portys for distans sensors
     DDRF &= ~IRa & ~IRaR & ~IRaL;
     DDRD &= ~IRb & ~IRbR & ~IRbL;
-
     //disconect inside VCC
     PORTF &= ~IRa & ~IRaR & ~IRaL;
     PORTD &= ~IRb & ~IRbR & ~IRbL;
   }
+
+	//show error function
+	void error(int errorNr){
+		while(true){
+			for (int i = 0; i < errorNr; ++i){
+				delay(200);
+				builtLed1_TOG;
+			}
+			delay(2000);
+		}
+	}

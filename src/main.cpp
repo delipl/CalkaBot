@@ -1,4 +1,5 @@
 #include "header.h"
+#include "motor.h"
 #include "program0.h"
 
 void setup(){
