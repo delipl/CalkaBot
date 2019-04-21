@@ -1,18 +1,22 @@
 #include "header.h"
 
 void setup(){
+	//pin mode
+	pins();
+
 	//turning on boarD
+	builtLed1_ON;
 	for (int i = 0; i < 5; ++i){
 		delay(100);
 		builtLed1_TOG;
     builtLed2_TOG;
 	}
+	builtLed1_OFF;
+	builtLed2_OFF;
 
-//pin mode
-pins();
 
 //start
-go(full, full);
+	go(full, full);
 }
 
 void loop(){
@@ -23,7 +27,7 @@ void loop(){
 	else if(!edgeB)					go(full, full);
 	else if(!edgeBL) 				go(full, half);
 	else if(!edgeBR)				go(half, full);
-
+	/*
 	//straight attack
 	else if(!IRa)						go(full, full);
 	else if(!IRb)						goBack(full, full);
@@ -40,6 +44,6 @@ void loop(){
 	}
 	else if(!IRbL){
 		while(IRb || floorSensors())	goBack(0, full);
-	}
-	else 										go(full, full);
+	}*/
+	//else 										go(full, full);
 }
