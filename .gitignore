@@ -1,5 +1,5 @@
-schemat.s#*
-schemat.B#*
+schematic/schemat.s#*
+schematic/schemat.b#*
 .pio
 .pioenvs
 .piolibdeps
