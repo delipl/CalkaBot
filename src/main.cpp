@@ -19,9 +19,9 @@ void setup(){
 
 	//====================switch checking===================\\
 
-	if(PINF & but1) program++;
-	if(PINF & but2) program+=2;
-	if(PINF & but3) program+=4;   //not sure if it work like this (propably not deli do sth with this XD)
+	if(!status_but1) program++;
+	if(!status_but2) program+=2;
+	if(!status_but3) program+=4;   
 
 	//========================================================\\
 

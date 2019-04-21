@@ -1,8 +1,8 @@
 #include <Arduino.h>
 
-uint8_t full = 255;
-uint8_t optimal =200; //max speed, not to fligh away from ring
-uint8_t half = 180;
+uint8_t full 		= 255;
+uint8_t optimal = 200; //max speed, not to fligh away from ring
+uint8_t half 		= 180;
 bool direction  = true;
 uint8_t program = 0;
 
@@ -42,17 +42,11 @@ uint8_t program = 0;
   #define but1      (1<<PF0)
   #define but2      (1<<PF1)
   #define but3      (1<<PF4)
-/*
-  #define butConf1    ((PINF & but1) | (PINF & but2) | (PINF & but3))
-  #define butConf2    (((PINF & but1) | (PINF & but2)) & (PINF & ~but3))
-  #define butConf3    ((PINF & but1) & (PINF & ~but2) & (PINF & ~but3))
-  #define butConf4    ((PINF & but1) & (PINF & but2) & (PINF & but3))
-  #define butConf5    ((PINF & ~but1) & ((PINF & but2) | (PINF & but3)))
-  #define butConf6    ((PINF & ~but1) | (PINF & ~but2) | (PINF & but3))
-  #define butConf7    ((PINF & ~but1) | (PINF & but2) | (PINF & ~but3))
-  #define butConf8    ((PINF & but1) | (PINF & ~but2) | (PINF & but3))
 
-*/
+	#define status_but1	(PINF & but1)
+	#define status_but2	(PINF & but2)
+	#define status_but3 (PINF & but3)
+
   //distans Sensors
   #define IRa       (1<<PF6)
   #define IRaR      (1<<PF5)
