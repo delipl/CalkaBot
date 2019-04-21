@@ -6,7 +6,7 @@ uint8_t half 		= 180;
 uint8_t program = 0;
 
 	//direction
-	bool direction true;
+	bool direction = true;
 	#define direction_TOG direction ^= true
 
   //Leds on board
