@@ -1,14 +1,9 @@
-#include "header.h"
 
 bool seeEnemy(){
   //also here we have to put some code :P
 
   //this is true when CalkaBot sees the enemy just straight ahead
   return !disA || !disB;
-}
-
-void togDirection(){
-  direction?direction=0:direction=1;
 }
 
 //control motors

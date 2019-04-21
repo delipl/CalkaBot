@@ -7,7 +7,7 @@ program0(){
               go(optimal, optimal);
            }
       }else{
-           togDirection();
+           direction_TOG;
            while (floorSensors) go(full, full);
       }
   }
