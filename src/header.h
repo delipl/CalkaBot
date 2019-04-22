@@ -32,15 +32,6 @@ uint8_t program = 0;
   #define edgeBL    (PIND & FbL)
   #define edgeBR    (PIND & FbR)
 
-  bool floorSensors(){
-    return  !edgeA  ||
-            !edgeAL ||
-            !edgeAR ||
-            !edgeB  ||
-            !edgeBR ||
-            !edgeBL;
-  }
-
   //buttons
   #define but1      (1<<PF0)
   #define but2      (1<<PF1)
