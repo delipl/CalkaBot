@@ -1,3 +1,9 @@
+/*
+Default program in mini-sumo
+just finding the enemy and attacking
+it with whole power
+*/
+
 bool first = false;
 void program0(){
   while(true){
