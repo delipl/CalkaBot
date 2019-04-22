@@ -1,6 +1,7 @@
 #include "header.h"
 #include "motor.h"
 #include "program0.h"
+#include "program1.h"
 
 void setup(){
 	//pin mode
@@ -29,7 +30,7 @@ void loop(){
 			program0();
 			break;
 		case 1:
-			program0();
+			program1();
 			break;
 		case 2:
 			program0();

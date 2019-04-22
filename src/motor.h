@@ -75,3 +75,13 @@ bool toSeeFront(){
   error(2);
   return 0;
 }
+
+//to spin
+void spin(){
+  analogWrite(6, full);
+  analogWrite(13,full);
+  Ma1_OFF;
+  Ma2_ON;
+  Mb1_ON;
+  Mb2_OFF;
+}

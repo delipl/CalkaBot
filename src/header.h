@@ -4,6 +4,7 @@ uint8_t full 		= 255;
 uint8_t optimal = 200; //max speed, not to fligh away from ring
 uint8_t half 		= 180;
 uint8_t program = 0;
+bool first = true;		//first loop after start
 
 	//direction
 	bool direction = true;
