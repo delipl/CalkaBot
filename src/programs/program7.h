@@ -1,3 +1,4 @@
 void program7(){
-    error(7);
+    direction=1;
+    go(0);
 }
