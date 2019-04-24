@@ -1,13 +1,13 @@
 #include "header.h"
 #include "motor.h"
-#include "program0.h"
-#include "program1.h"
-#include "program2.h"
-#include "program3.h"
-#include "program4.h"
-#include "program5.h"
-#include "program6.h"
-#include "program7.h"
+#include "programs/program0.h"
+#include "programs/program1.h"
+#include "programs/program2.h"
+#include "programs/program3.h"
+#include "programs/program4.h"
+#include "programs/program5.h"
+#include "programs/program6.h"
+#include "programs/program7.h"
 
 void setup(){
 	//pin mode

@@ -23,7 +23,8 @@ program1(){
       }
       first = false;
     }
-    if(seeEnemy)
-      program0();
+    //if(seeEnemy)
+
+
   }
 }
