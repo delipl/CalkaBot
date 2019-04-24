@@ -2,6 +2,12 @@
 #include "motor.h"
 #include "program0.h"
 #include "program1.h"
+#include "program2.h"
+#include "program3.h"
+#include "program4.h"
+#include "program5.h"
+#include "program6.h"
+#include "program7.h"
 
 void setup(){
 	//pin mode
@@ -18,13 +24,16 @@ void setup(){
 	builtLed2_OFF;
 
 	//switch checking
-	if(!status_but1) program++;
-	if(!status_but2) program+=2;
-	if(!status_but3) program+=4;
+	if(!status_but1) program |= (1<<0);
+	if(!status_but2) program |= (1<<1);
+	if(!status_but3) program |= (1<<2);
+
+	Serial.begin(9600);
 }
 
 
 void loop(){
+
 	switch(program){
 		case 0:
 			program0();
@@ -33,22 +42,22 @@ void loop(){
 			program1();
 			break;
 		case 2:
-			program0();
+			program2();
 			break;
 		case 3:
-			program0();
+			program3();
 			break;
 		case 4:
-			program0();
+			program4();
 			break;
 		case 5:
-			program0();
+			program5();
 			break;
 		case 6:
-			program0();
+			program6();
 			break;
 		case 7:
-			program0();
+			program7();
 			break;
 		default:
 			error(1);
