@@ -5,20 +5,20 @@ void program2(){
     hardStop();
 
     while(true){
-      if(!seeEnemy)spin(1);
-      else if(floorSensors(direction)){
+      if(floorSensors(direction)){
         direction_TOG;
         if(go(0));
         delay(toBeMiddle);
       }
-      if(!disA){
+      else if(!disA){
         direction=1;
         go(0);
       }
-      if(!disB){
+      else if(!disB){
         direction=0;
         go(0);
       }
-      if(!disAR || !disAL || !disBL || !disBR) if(toSeeFront()) go(0);
+      else if(!disAR || !disAL || !disBL || !disBR) if(toSeeFront()) go(0);
+      else spin(1);
     }
 }
