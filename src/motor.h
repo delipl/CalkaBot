@@ -140,30 +140,17 @@ bool go(int x){   //0 - full   1 - optimal 2 -  left 3 -right
 
 //turn one of side until you don't touch floor and you don't see enemy
 bool toSeeFront(){
-  /*if(!disAR || !disBR){
-    go(optimal, false);
-    while(true){
-      if(!floorSensors)   return false;
-      //if(!disAR || !disBR)  return true;
-      if(disAR)  return true;
-    }
-  }
-  if(!disAL || !disBL){
-    go(0, optimal);
-    while(true){
-      if(!floorSensors)   return false;
-      if(disAL)           return true;
-    }
-  }*/
+  if(!disBL || !disBR) direction=0;
+  else if(!disAL || !disAR) direction=1;
+  if(!disAL||!disBR) go(2);
+  else if(!disAR||!disBL)go(3);
 
-  //error(2);
+  if(!disA||!disB)return 1;
   return 0;
 }
 
 //to spin
 void spin(bool x){
-  analogWrite(6, full);
-  analogWrite(13,full);
   if(x){
     Ma1_OFF;
     Ma2_ON;

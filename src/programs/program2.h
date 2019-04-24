@@ -6,5 +6,5 @@ it with whole power
 
 
 void program2(){
-    error(2);
+
 }
