@@ -3,8 +3,8 @@
 uint8_t full 		= 255;
 uint8_t optimal = 200; //max speed, not to fligh away from ring
 uint8_t half 		= 180;
-uint8_t program = 0;
-bool first = true;		//first loop after start
+uint8_t program = 0x0;
+bool first 			= 0b1;		//first loop after start
 
 	//direction
 	bool direction = true;
@@ -34,9 +34,9 @@ bool first = true;		//first loop after start
   #define edgeBR    (PIND & FbR)
 
   //buttons
-  #define but1      (1<<PF0)
+  #define but1      (1<<PF4)
   #define but2      (1<<PF1)
-  #define but3      (1<<PF4)
+  #define but3      (1<<PF0)
 
 	#define status_but1	(PINF & but1)
 	#define status_but2	(PINF & but2)
@@ -114,10 +114,40 @@ bool first = true;		//first loop after start
 	//show error function
 	void error(int errorNr){
 		while(true){
-			for (int i = 0; i < errorNr; ++i){
+			for (int i = 0; i < 2*errorNr; ++i){
 				delay(200);
 				builtLed1_TOG;
 			}
 			delay(2000);
+			//Serial.println(program);
 		}
+	}
+
+	//diode start
+	void showStart(){
+		builtLed1_ON;
+		for (int i = 0; i < 5; ++i){
+			delay(100);
+			builtLed1_TOG;
+	    builtLed2_TOG;
+		}
+		builtLed1_OFF;
+		builtLed2_OFF;
+	}
+
+	bool floorSensors(){
+	  return  !edgeA  ||
+	          !edgeAL ||
+	          !edgeAR ||
+	          !edgeB  ||
+	          !edgeBR ||
+	          !edgeBL;
+	}
+
+	//when CalkaBot sees the enemyy not straight ahead
+	bool seeEnemy(){
+	  return  !disAR  ||
+	          !disAL  ||
+	          !disBR  ||
+	          !disBL;
 	}

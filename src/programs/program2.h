@@ -5,21 +5,21 @@ it with whole power
 */
 
 
-void program0(){
+void program2(){
   while(true){
     //what do firstly
-    if(first){
+    /*if(first){
       delay(4500);
       go(optimal, optimal);
       first = false;
-    }
+    }*/
 
     //when you don't see the enemy straight ahead change direction and go
-    if(!floorSensors() && disA && disB){
+    if(!floorSensors() /*&& disA && disB*/){
       direction_TOG;
-      go(optimal, optimal);
     }
-
+    go(150, 150);
+/*
     //when you are being pushed by the enemy
     else if(!floorSensors() && (!disA || !disB)){
       go(full, full);
@@ -36,6 +36,7 @@ void program0(){
         direction_TOG;
         go(optimal, optimal);
       }
-    }
+
+    }*/
   }
 }
