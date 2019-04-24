@@ -165,5 +165,7 @@ int p = 50;
 	  return  !disAR  ||
 	          !disAL  ||
 	          !disBR  ||
-	          !disBL;
+	          !disBL	||
+						!disA		||
+						!disB;
 	}

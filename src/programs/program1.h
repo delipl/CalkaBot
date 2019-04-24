@@ -15,8 +15,16 @@ void program1(){
         }
       }
     }else{
-        if(!disAR || !disAL || !disBL || !disBR)
-        if(toSeeFront()) go(0);
+        if(!disA){
+          direction=1;
+          go(0);
+        }
+        if(!disB){
+          direction=0;
+          go(0);
+        }
+        if(!disAR || !disAL || !disBL || !disBR) if(toSeeFront()) go(0);
+
     }
   }
 }
