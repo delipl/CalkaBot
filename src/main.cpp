@@ -14,14 +14,7 @@ void setup(){
 	pins();
 
 	//turning on boarD
-	builtLed1_ON;
-	for (int i = 0; i < 5; ++i){
-		delay(100);
-		builtLed1_TOG;
-    builtLed2_TOG;
-	}
-	builtLed1_OFF;
-	builtLed2_OFF;
+	showStart();
 
 	//switch checking
 	if(!status_but1) program |= (1<<0);

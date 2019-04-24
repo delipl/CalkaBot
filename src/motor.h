@@ -39,22 +39,7 @@ void slowStop(){
 }
 
 //floor sensors
-bool floorSensors(){
-  return  !edgeA  ||
-          !edgeAL ||
-          !edgeAR ||
-          !edgeB  ||
-          !edgeBR ||
-          !edgeBL;
-}
 
-//when CalkaBot sees the enemyy not straight ahead
-bool seeEnemy(){
-  return  !disAR  ||
-          !disAL  ||
-          !disBR  ||
-          !disBL;
-}
 
 //turn one of side until you don't touch floor and you don't see enemy
 bool toSeeFront(){

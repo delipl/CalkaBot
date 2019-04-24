@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-uint8_t full 		= 0xFF;
+uint8_t full 		= 255;
 uint8_t optimal = 200; //max speed, not to fligh away from ring
 uint8_t half 		= 180;
 uint8_t program = 0x0;
@@ -121,4 +121,33 @@ bool first 			= 0b1;		//first loop after start
 			delay(2000);
 			//Serial.println(program);
 		}
+	}
+
+	//diode start
+	void showStart(){
+		builtLed1_ON;
+		for (int i = 0; i < 5; ++i){
+			delay(100);
+			builtLed1_TOG;
+	    builtLed2_TOG;
+		}
+		builtLed1_OFF;
+		builtLed2_OFF;
+	}
+
+	bool floorSensors(){
+	  return  !edgeA  ||
+	          !edgeAL ||
+	          !edgeAR ||
+	          !edgeB  ||
+	          !edgeBR ||
+	          !edgeBL;
+	}
+
+	//when CalkaBot sees the enemyy not straight ahead
+	bool seeEnemy(){
+	  return  !disAR  ||
+	          !disAL  ||
+	          !disBR  ||
+	          !disBL;
 	}
