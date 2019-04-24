@@ -1,5 +1,6 @@
 void program7(){
-  while(true){
+  //while(true){
+    //go(full, full);
     error(7);
-  }
+  //}
 }
