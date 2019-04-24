@@ -1,4 +1,4 @@
 void program3(){
-  error(3);
-
+  delay(1000);
+  program1();
 }
