@@ -2,7 +2,7 @@ void program4(){
   while(true){
       if(!edgeAL && !edgeBL){
         while(!edgeAL && !edgeBL){
-          go(3);
+          slowSpin();
         }
       }else{
         go(0);

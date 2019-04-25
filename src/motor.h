@@ -163,7 +163,6 @@ bool toSeeFront(){
 
 //to spin
 void spin(){
-
     Ma1_OFF;
     Ma2_ON;
     Mb1_ON;
@@ -171,4 +170,15 @@ void spin(){
     delay(1);
     slowStop();
     delay(1);
+}
+
+//to slowly spin
+void slowSpin(){
+    Ma1_OFF;
+    Ma2_ON;
+    Mb1_ON;
+    Mb2_OFF;
+    delay(5);
+    slowStop();
+    delay(5);
 }
