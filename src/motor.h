@@ -140,26 +140,35 @@ bool go(int x){   //0 - full   1 - optimal 2 -  left 3 -right
 
 //turn one of side until you don't touch floor and you don't see enemy
 bool toSeeFront(){
+
   if(!disBL || !disBR) direction=0;
   else if(!disAL || !disAR) direction=1;
-  if(!disAL||!disBR) go(2);
-  else if(!disAR||!disBL)go(3);
 
-  if(!disA||!disB)return 1;
-  return 0;
+/*  if(!disA || !disB) return 1;
+  else if(disAR && disAL && disBL && disBR) return 0;*/
+  if(!disAL||!disBR){
+    while(disA && disB){
+      if(!go(2)) return 0;
+    }
+    return 1;
+  }
+
+  else if(!disAR||!disBL){
+    while(disA && disB){
+      if(!go(3)) return 0;
+    }
+    return 1;
+  }
 }
 
 //to spin
-void spin(bool x){
-  if(x){
+void spin(){
+
     Ma1_OFF;
     Ma2_ON;
     Mb1_ON;
     Mb2_OFF;
-  }else{
-    Ma1_ON;
-    Ma2_OFF;
-    Mb1_OFF;
-    Mb2_ON;
-  }
+    delay(1);
+    slowStop();
+    delay(1);
 }
