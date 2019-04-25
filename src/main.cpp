@@ -15,7 +15,7 @@ void setup(){
 
 	//turning on boarD
 	showStart();
-
+	delay(4500);
 	//switch checking
 	if(!status_but1) program |= (1<<0);
 	if(!status_but2) program |= (1<<1);
@@ -26,6 +26,7 @@ void setup(){
 
 
 void loop(){
+
 
 	switch(program){
 		case 0:
