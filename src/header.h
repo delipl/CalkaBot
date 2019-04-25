@@ -5,10 +5,16 @@ uint8_t optimal = 200; //max speed, not to fligh away from ring
 uint8_t half 		= 180;
 uint8_t program = 0x0;
 bool first 			= 0b1;		//first loop after start
+bool shown 			= false;
+bool touch 			= false;
+int p = 50;
+
+
+
 
 	//direction
 	bool direction = true;
-	#define direction_TOG direction ^= true
+	#define direction_TOG direction ^= true// 0 ^ 1 = 1 1
 
   //Leds on board
 	#define builtLed1 		(1<<PE2)
@@ -79,15 +85,42 @@ bool first 			= 0b1;		//first loop after start
 	#define Mb2_OFF	 		PORTC &= ~Mb2
 	#define	MbPWM_ON		PORTC |= MbPWM
 
+	//show error function
+	void error(int errorNr){
+		Ma1_OFF;
+		Ma2_OFF;
+		Mb1_OFF;
+		Mb2_OFF;
+		while(true){
+			for (int i = 0; i < 2*errorNr; ++i){
+				delay(200);
+				builtLed1_TOG;
+			}
+			delay(2000);
+
+			//Serial.println(program);
+		}
+	}
+
+	//if touch
+	bool floorSensors(bool d){
+		if(d) 			return !edgeAL || !edgeAR;
+		else if(!d)  return !edgeBR || !edgeBL;
+		else error(15);
+	}
+
 	//pins ins and outs
   void pins(){
     //output ports for motor A control
 		pinMode(6, OUTPUT);
     DDRB |= Ma1 | Ma2;
-
+		DDRD |= MaPWM;
+		MaPWM_ON;
     //output ports for motor B control
   	DDRC |= Mb2;
     DDRB |= Mb1;
+		DDRC |= MbPWM;
+		MbPWM_ON;
 		pinMode(13, OUTPUT);
 
 		//output ports for leds
@@ -111,17 +144,7 @@ bool first 			= 0b1;		//first loop after start
     PORTD &= ~IRb & ~IRbR & ~IRbL;
   }
 
-	//show error function
-	void error(int errorNr){
-		while(true){
-			for (int i = 0; i < 2*errorNr; ++i){
-				delay(200);
-				builtLed1_TOG;
-			}
-			delay(2000);
-			//Serial.println(program);
-		}
-	}
+
 
 	//diode start
 	void showStart(){
@@ -135,19 +158,14 @@ bool first 			= 0b1;		//first loop after start
 		builtLed2_OFF;
 	}
 
-	bool floorSensors(){
-	  return  !edgeA  ||
-	          !edgeAL ||
-	          !edgeAR ||
-	          !edgeB  ||
-	          !edgeBR ||
-	          !edgeBL;
-	}
+
 
 	//when CalkaBot sees the enemyy not straight ahead
 	bool seeEnemy(){
 	  return  !disAR  ||
 	          !disAL  ||
 	          !disBR  ||
-	          !disBL;
+	          !disBL	||
+						!disA		||
+						!disB;
 	}

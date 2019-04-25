@@ -1,5 +1,4 @@
 void program3(){
-  while(true){
-    error(3);
-  }
+  delay(1000);
+  program1();
 }

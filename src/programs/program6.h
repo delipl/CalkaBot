@@ -1,5 +1,3 @@
 void program6(){
-  while(true){
-    error(6);
-  }
+  error(6);
 }

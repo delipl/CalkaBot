@@ -1,30 +1,30 @@
-/*
-After start CalkaBot does't move for 4500ms
-but looks for the enemy
-After 4500 begins spinning and looking for the enemy
-when it find the program0 will work
-*/
-int startTime;
-program1(){
-  while (true) {
-    if(first){
-      startTime = millis(); //does it work w\like that?
-      while(!seeEnemy && disA && disB){
-        if(millis() - startTime >= 4500){
-          if(!disA)
-            go(full, full);
-          else if(!disB){
-            direction_TOG;
-            go(full, full);
-          }
-          else
-            spin();
+void program1(){
+
+  while(true){
+  touch = false;
+    if(!go(1)){
+      hardStop();
+      delay(2);
+      direction_TOG;
+      touch = true;
+      builtLed1_TOG;
+      while(touch){
+        if(go(1)&&floorSensors(!direction)){
+          builtLed2_TOG;
+          touch = false;
         }
       }
-      first = false;
+    }else{
+        if(!disA){
+          direction=1;
+          go(0);
+        }
+        if(!disB){
+          direction=0;
+          go(0);
+        }
+        if(!disAR || !disAL || !disBL || !disBR) if(toSeeFront()) go(0);
+
     }
-    //if(seeEnemy)
-
-
   }
 }

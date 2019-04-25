@@ -1,5 +1,4 @@
 void program7(){
-  while(true){
-    error(7);
-  }
+    direction=1;
+    go(0);
 }
