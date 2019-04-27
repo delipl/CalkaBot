@@ -7,6 +7,7 @@ uint8_t program = 0x0;
 bool first 			= 0b1;		//first loop after start
 bool shown 			= false;
 bool touch 			= false;
+bool checkFloor = true;
 int p = 50;
 
 
