@@ -56,80 +56,30 @@ bool go(int x){   //0 - full   1 - optimal 2 -  left 3 -right
 
         if(direction){
             goForward();
+            Ma1_OFF;
+            Ma2_OFF;
             if(floorSensors(direction) && checkFloor) return 0;
-            delayMicroseconds(100);
-            slowStop();
-            Mb2_ON;
-            if(floorSensors(direction) && checkFloor) return 0;
-            delay(1);
-            slowStop();
-            if(floorSensors(direction) && checkFloor) return 0;
-            delayMicroseconds(100);
-
         }else if(!direction){
-          goBackward();
-          if(floorSensors(direction) && checkFloor) return 0;
-          delayMicroseconds(100);
-          slowStop();
-          Ma1_ON;
-          if(floorSensors(direction) && checkFloor) return 0;
-          delay(1);
-          slowStop();
-          if(floorSensors(direction) && checkFloor) return 0;
-          delayMicroseconds(100);
+            goBackward();
+            Ma1_OFF;
+            Ma2_OFF;
+            if(floorSensors(direction) && checkFloor) return 0;
         }else error(11);
 
   }else if (x==3){
 
         if(direction){
             goForward();
+            Mb1_OFF;
+            Mb2_OFF;
             if(floorSensors(direction) && checkFloor) return 0;
-            delayMicroseconds(100);
-            slowStop();
-            Ma2_ON;
-            if(floorSensors(direction) && checkFloor) return 0;
-            delay(1);
-            slowStop();
-            if(floorSensors(direction) && checkFloor) return 0;
-            delayMicroseconds(100);
         }else if(!direction){
             goBackward();
+            Mb1_OFF;
+            Mb2_OFF;
             if(floorSensors(direction) && checkFloor) return 0;
-            delayMicroseconds(100);
-            slowStop();
-            Mb1_ON;
-            if(floorSensors(direction) && checkFloor) return 0;
-            delay(1);
-            slowStop();
-            if(floorSensors(direction) && checkFloor) return 0;
-            delayMicroseconds(100);
         }else error(12);
-
-  }
-  else if(x==4){
-    if(direction){
-      for(int i = p; i < 101; i++){
-        goForward();
-        if(floorSensors(direction) && checkFloor) return 0;
-        delayMicroseconds(p);
-        slowStop();
-        if(floorSensors(direction) && checkFloor) return 0;
-        delayMicroseconds(100-p);
-      }
     }
-    else if(!direction){
-      for(int i = p; i < 101; i++){
-        goBackward();
-        if(floorSensors(direction) && checkFloor) return 0;
-        delayMicroseconds(p);
-        slowStop();
-        if(floorSensors(direction) && checkFloor) return 0;
-        delayMicroseconds(100-p);
-      }
-    }
-    else error(15);
-
-  }
   else error(13);
   return 1;
 }
@@ -170,7 +120,7 @@ void spin(){
     Mb2_OFF;
     delay(1);
     slowStop();
-    delay(1);
+    delay(3);
 }
 
 //to slowly spin
