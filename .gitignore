@@ -6,3 +6,4 @@ schematic/schemat.b#*
 .clang_complete
 .gcc-flags.json
 platformio.ini
+lib/
