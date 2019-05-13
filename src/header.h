@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include "../lib/IRremote/IRremote.h"
 
 uint8_t full 		= 255;
 uint8_t optimal = 200; //max speed, not to fligh away from ring
@@ -9,13 +10,11 @@ bool shown 			= false;
 bool touch 			= false;
 bool checkFloor = true;
 int p = 50;
-
-
-
+bool play 			= 0;
 
 	//direction
 	bool direction = true;
-	#define direction_TOG direction ^= true// 0 ^ 1 = 1 1
+	#define direction_TOG direction ^= true // 0 ^ 1 = 1 1
 
   //Leds on board
 	#define builtLed1 		(1<<PE2)
@@ -48,6 +47,12 @@ int p = 50;
 	#define status_but1	(PINF & but1)
 	#define status_but2	(PINF & but2)
 	#define status_but3 (PINF & but3)
+
+	//ir comunication
+	#define irPin     		(1<<PB0)
+	#define irPin_status	(PINB & irPin)
+	IRrecv irrecv(RXLED0);
+	decode_results results;
 
   //distans Sensors
   #define IRa       (1<<PF6)
@@ -92,7 +97,7 @@ int p = 50;
 		Ma2_OFF;
 		Mb1_OFF;
 		Mb2_OFF;
-		while(true){
+		while(play){
 			for (int i = 0; i < 2*errorNr; ++i){
 				delay(200);
 				builtLed1_TOG;
@@ -104,9 +109,9 @@ int p = 50;
 	}
 
 	//if touch
-	bool floorSensors(bool d){
-		if(d) 			return !edgeAL || !edgeAR;
-		else if(!d)  return !edgeBR || !edgeBL;
+	bool floorSensors(){
+ 		if(direction)					return !edgeAL || !edgeAR;
+		else if(!direction)  	return !edgeBR || !edgeBL;
 		else error(15);
 	}
 
@@ -137,6 +142,11 @@ int p = 50;
     //disconnect insice VCC
     PORTF &= ~but1 & ~but2 & ~but3;
 
+		//input port for ir
+		DDRB 	&= ~irPin;
+		//disconnect inside VCC
+		PORTB &= ~irPin;
+
     //input portys for distans sensors
     DDRF &= ~IRa & ~IRaR & ~IRaL;
     DDRD &= ~IRb & ~IRbR & ~IRbL;
@@ -144,8 +154,6 @@ int p = 50;
     PORTF &= ~IRa & ~IRaR & ~IRaL;
     PORTD &= ~IRb & ~IRbR & ~IRbL;
   }
-
-
 
 	//diode start
 	void showStart(){
@@ -158,8 +166,6 @@ int p = 50;
 		builtLed1_OFF;
 		builtLed2_OFF;
 	}
-
-
 
 	//when CalkaBot sees the enemyy not straight ahead
 	bool seeEnemy(){
