@@ -35,19 +35,19 @@ bool go(int x){   //0 - full   1 - optimal 2 -  left 3 -right
         if(direction){
 
               goForward();
-              if(floorSensors(direction) && checkFloor) return 0;
+              if(floorSensors() && checkFloor) return 0;
               delayMicroseconds(p);
               slowStop();
-              if(floorSensors(direction) && checkFloor) return 0;
+              if(floorSensors() && checkFloor) return 0;
               delayMicroseconds(100-p);
 
         }else if(!direction){
 
               goBackward();
-              if(floorSensors(direction) && checkFloor) return 0;
+              if(floorSensors() && checkFloor) return 0;
               delayMicroseconds(p);
               slowStop();
-              if(floorSensors(direction) && checkFloor) return 0;
+              if(floorSensors() && checkFloor) return 0;
               delayMicroseconds(100-p);
 
         }else error(9);
@@ -58,12 +58,12 @@ bool go(int x){   //0 - full   1 - optimal 2 -  left 3 -right
             goForward();
             Ma1_OFF;
             Ma2_OFF;
-            if(floorSensors(direction) && checkFloor) return 0;
+            if(floorSensors() && checkFloor) return 0;
         }else if(!direction){
             goBackward();
             Ma1_OFF;
             Ma2_OFF;
-            if(floorSensors(direction) && checkFloor) return 0;
+            if(floorSensors() && checkFloor) return 0;
         }else error(11);
 
   }else if (x==3){
@@ -72,12 +72,12 @@ bool go(int x){   //0 - full   1 - optimal 2 -  left 3 -right
             goForward();
             Mb1_OFF;
             Mb2_OFF;
-            if(floorSensors(direction) && checkFloor) return 0;
+            if(floorSensors() && checkFloor) return 0;
         }else if(!direction){
             goBackward();
             Mb1_OFF;
             Mb2_OFF;
-            if(floorSensors(direction) && checkFloor) return 0;
+            if(floorSensors() && checkFloor) return 0;
         }else error(12);
     }
   else error(13);
@@ -94,8 +94,8 @@ bool toSeeFront(){
     //if(!disA || !disB) return 1;
   if(disA && disB && disAR && disAL && disBL && disBR) return 0;
 
-  if(!disBL || !disBR) direction=0;
-  else if(!disAL || !disAR) direction=1;
+  if(!disBL || !disBR || !disB) direction=0;
+  else if(!disAL || !disAR || !disA) direction=1;
 
   if(!disAL||!disBR){
     while(disA && disB){

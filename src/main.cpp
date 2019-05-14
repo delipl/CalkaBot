@@ -71,9 +71,9 @@ void loop(){
 				error(1);
 				break;
 		}
-		if(!irPin_status){
+		/*if(!irPin_status){
 			builtLed1_TOG;
 			play = 0;
-		}
+		}*/
 	}
 }
