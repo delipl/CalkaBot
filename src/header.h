@@ -49,9 +49,10 @@ bool play 			= 0;
 	#define status_but3 (PINF & but3)
 
 	//ir comunication
-	#define irPin     		(1<<PB0)
+	//#define irPin     		(1<<PB0)
+	#define irPin     		17
 	#define irPin_status	(PINB & irPin)
-	IRrecv irrecv(RXLED0);
+	IRrecv irrecv(irPin);
 	decode_results results;
 
   //distans Sensors
