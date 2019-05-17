@@ -2,9 +2,14 @@ void program1(){
   while(true){
       if(!floorSensors(direction)){
         if(!disA || !disB){
-          if(!disA)direction=1;
-          else if(!disB) direction=0;
-          go(0);
+          while(!disA){
+            direction=1;
+            go(0);
+          }
+          while(!disB){
+            direction=0;
+            go(0);
+          }
         }else if (!disAR || !disAL || !disBL || !disBR){
           if(!toSeeFront()){
             hardStop();
