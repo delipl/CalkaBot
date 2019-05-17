@@ -1,6 +1,8 @@
 #include <Arduino.h>
 #include "../lib/IRremote/IRremote.h"
 
+
+
 uint8_t full 		= 255;
 uint8_t optimal = 200; //max speed, not to fligh away from ring
 uint8_t half 		= 180;
@@ -10,7 +12,7 @@ bool shown 			= false;
 bool touch 			= false;
 bool checkFloor = true;
 int p = 50;
-bool play 			= 0;
+unsigned long start;
 
 	//direction
 	bool direction = true;
@@ -98,10 +100,12 @@ bool play 			= 0;
 		Ma2_OFF;
 		Mb1_OFF;
 		Mb2_OFF;
-		while(play){
-			for (int i = 0; i < 2*errorNr; ++i){
+		while(true){
+			for (int i = 0; i < errorNr; ++i){
 				delay(200);
-				builtLed1_TOG;
+				builtLed1_ON;
+				delay(200);
+				builtLed1_OFF;
 			}
 			delay(2000);
 
@@ -114,6 +118,7 @@ bool play 			= 0;
  		if(direction)					return !edgeAL || !edgeAR;
 		else if(!direction)  	return !edgeBR || !edgeBL;
 		else error(15);
+		return 0;
 	}
 
 	//pins ins and outs
@@ -156,6 +161,8 @@ bool play 			= 0;
     PORTD &= ~IRb & ~IRbR & ~IRbL;
   }
 
+
+
 	//diode start
 	void showStart(){
 		builtLed1_ON;
@@ -176,4 +183,52 @@ bool play 			= 0;
 	          !disBL	||
 						!disA		||
 						!disB;
+	}
+
+
+	byte irRemoute ()
+	{
+	byte dane=0;
+	  while(dane==0)
+	{
+	   if (irrecv.decode(&results)) // sprawdza, czy otrzymano sygna� IR
+	{
+	       unsigned long odczyt = results.value; // sygnał zapisuje jako odczyt
+	switch (odczyt)
+	       {
+	case 3785549847: //power
+	  dane = 1;
+	break;
+	case 1857: //power
+	  dane = 1;
+	break;
+	case 3905: //eneter
+		dane = 1;
+	break;
+	case 16711935: //eneter
+		dane = 1;
+	break;
+
+	default:
+	         dane=0;
+	}
+	      irrecv.resume(); // reseruje czujnik
+	}
+	   else
+	{
+	    dane=0;
+	}
+	  }
+	return dane ;
+	}
+
+	bool readButton(){
+		if (!digitalRead(irPin)){
+			delay(100);
+			if(!digitalRead(irPin)){
+
+				return false;
+			}else return true;
+		}else return true;
+		return true;
 	}

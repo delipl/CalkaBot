@@ -84,43 +84,15 @@ bool go(int x){   //0 - full   1 - optimal 2 -  left 3 -right
   return 1;
 }
 
-
-//floor sensors
-
-
-//turn one of side until you don't touch floor and you don't see enemy
-bool toSeeFront(){
-
-    //if(!disA || !disB) return 1;
-  if(disA && disB && disAR && disAL && disBL && disBR) return 0;
-
-  if(!disBL || !disBR || !disB) direction=0;
-  else if(!disAL || !disAR || !disA) direction=1;
-
-  if(!disAL||!disBR){
-    while(disA && disB){
-      if(!go(2)) return 0;
-    }
-    return 1;
-  }
-
-  else if(!disAR||!disBL){
-    while(disA && disB){
-      if(!go(3)) return 0;
-    }
-    return 1;
-  }
-}
-
 //to spin
 void spin(){
     Ma1_OFF;
     Ma2_ON;
     Mb1_ON;
     Mb2_OFF;
-    delay(1);
-    slowStop();
     delay(3);
+    slowStop();
+    delay(5);
 }
 
 //to slowly spin
