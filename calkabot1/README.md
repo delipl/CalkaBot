@@ -24,3 +24,5 @@ Oznaczenia wyjść i wejść w kodzie:
 |      ?        |    D1   |     `sensorBL`    | Czujnik odległości prawy tylny  |
 |      ?        |    D7   |     `sensorB`     |   Czujnik odległości tylni      |
 |      ?        |    D4   |     `sensorBR`    |  Czujnik odległości prawy tylni |
+
+Robot by CalkaCompany+
