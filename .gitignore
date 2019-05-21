@@ -7,3 +7,4 @@ schematic/*.b#*
 .gcc-flags.json
 platformio.ini
 lib/
+/calkabot*/.gitignore
