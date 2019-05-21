@@ -24,7 +24,6 @@ void setup(){
 	if(!status_but2) program |= (1<<1);
 	if(!status_but3) program |= (1<<2);
 	//Serial.begin(9600);
-
 	start = millis();
 }
 
