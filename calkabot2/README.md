@@ -1,3 +1,4 @@
+#CalkaBot 2
 C PORT pinout:
 
 | **PORT**|**Function**    			   | **Code** | **Pin** |
@@ -89,11 +90,11 @@ Code definitions:
 
 
 
-program0 ---------------------------------- empty
-program1 ---------------------------------- empty
-program2 ---------------------------------- spinner
-program3 ---------------------------------- basic
-program4 ---------------------------------- waiter
-program5 ----------------------------------
-program6 ---------------------------------- basic without floorSensors
-program7 ---------------------------------- wheels cleaner
+program0 empty
+program1 empty
+program2 spinner
+program3 basic
+program4 waiter
+program5
+program6 basic without floorSensors
+program7 wheels cleaner
