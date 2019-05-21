@@ -36,19 +36,19 @@ bool go(int x){   //0 - full   1 - optimal 2 -  left 3 -right
 
               goForward();
               if(floorSensors() && checkFloor) return 0;
-              delayMicroseconds(p);
+              _delay_us(p);
               slowStop();
               if(floorSensors() && checkFloor) return 0;
-              delayMicroseconds(100-p);
+              _delay_us(100-p);
 
         }else if(!direction){
 
               goBackward();
               if(floorSensors() && checkFloor) return 0;
-              delayMicroseconds(p);
+              _delay_us(p);
               slowStop();
               if(floorSensors() && checkFloor) return 0;
-              delayMicroseconds(100-p);
+              _delay_us(100-p);
 
         }else error(9);
 
@@ -90,9 +90,9 @@ void spin(){
     Ma2_ON;
     Mb1_ON;
     Mb2_OFF;
-    delay(3);
+    _delay_ms(3);
     slowStop();
-    delay(5);
+    _delay_ms(5);
 }
 
 //to slowly spin
@@ -101,7 +101,7 @@ void slowSpin(){
     Ma2_ON;
     Mb1_ON;
     Mb2_OFF;
-    delay(5);
+    _delay_ms(5);
     slowStop();
-    delay(10);
+    _delay_ms(10);
 }

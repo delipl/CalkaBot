@@ -1,5 +1,10 @@
-#include <Arduino.h>
-#include "../lib/IRremote/IRremote.h"
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <util/delay.h>
+#include <stdbool.h>
+#define false 0
+#define true 1
+
 
 
 
@@ -52,10 +57,10 @@ unsigned long start;
 
 	//ir comunication
 	//#define irPin     		(1<<PB0)
-	#define irPin     		17
+	/*#define irPin     		17
 	#define irPin_status	(PINB & irPin)
 	IRrecv irrecv(irPin);
-	decode_results results;
+	decode_results results;*/
 
   //distans Sensors
   #define IRa       (1<<PF6)
@@ -102,12 +107,12 @@ unsigned long start;
 		Mb2_OFF;
 		while(true){
 			for (int i = 0; i < errorNr; ++i){
-				delay(200);
+				_delay_ms(200);
 				builtLed1_ON;
-				delay(200);
+				_delay_ms(200);
 				builtLed1_OFF;
 			}
-			delay(2000);
+			_delay_ms(2000);
 
 			//Serial.println(program);
 		}
@@ -124,7 +129,7 @@ unsigned long start;
 	//pins ins and outs
   void pins(){
     //output ports for motor A control
-		pinMode(6, OUTPUT);
+		//pinMode(6, OUTPUT);
     DDRB |= Ma1 | Ma2;
 		DDRD |= MaPWM;
 		MaPWM_ON;
@@ -133,7 +138,7 @@ unsigned long start;
     DDRB |= Mb1;
 		DDRC |= MbPWM;
 		MbPWM_ON;
-		pinMode(13, OUTPUT);
+		//pinMode(13, OUTPUT);
 
 		//output ports for leds
   	DDRE |= builtLed1 | builtLed2;
@@ -148,10 +153,10 @@ unsigned long start;
     //disconnect insice VCC
     PORTF &= ~but1 & ~but2 & ~but3;
 
-		//input port for ir
+		/*//input port for ir
 		DDRB 	&= ~irPin;
 		//disconnect inside VCC
-		PORTB &= ~irPin;
+		PORTB &= ~irPin;*/
 
     //input portys for distans sensors
     DDRF &= ~IRa & ~IRaR & ~IRaL;
@@ -167,7 +172,7 @@ unsigned long start;
 	void showStart(){
 		builtLed1_ON;
 		for (int i = 0; i < 5; ++i){
-			delay(100);
+			_delay_ms(100);
 			builtLed1_TOG;
 	    builtLed2_TOG;
 		}
@@ -186,7 +191,7 @@ unsigned long start;
 	}
 
 
-	byte irRemoute ()
+	/*byte irRemoute ()
 	{
 	byte dane=0;
 	  while(dane==0)
@@ -220,15 +225,15 @@ unsigned long start;
 	}
 	  }
 	return dane ;
-	}
+}*/
 
-	bool readButton(){
+	/*bool readButton(){
 		if (!digitalRead(irPin)){
-			delay(100);
+			_delay_ms(100);
 			if(!digitalRead(irPin)){
 
 				return false;
 			}else return true;
 		}else return true;
 		return true;
-	}
+	}*/

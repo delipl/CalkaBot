@@ -4,17 +4,17 @@ jest tutaj dzialajacy seefront tylko ze z tylu
 void program2(){
   //while(true){
     if(!disB && disA){
-      while((!disB && disA) && readButton()){
+      while((!disB && disA) /*&& readButton()*/){
         goBackward();
       }
     }
     else if(!disA && disB){
-      while((!disA && disB) && readButton()){
+      while((!disA && disB) /*&& readButton()*/){
         goForward();
       }
     }
     if(!disBR){
-      while(disB && readButton()){
+      while(disB /*&& readButton()*/){
         Ma1_ON;
         Ma2_OFF;
         Mb1_OFF;
@@ -22,7 +22,7 @@ void program2(){
       }
     }
     else if(!disBL){
-      while(disB && readButton()){
+      while(disB /*&& readButton()*/){
         Ma1_OFF;
         Ma2_OFF;
         Mb1_ON;
@@ -30,7 +30,7 @@ void program2(){
       }
     }
     else if(!disAL){
-      while(disA && readButton()){
+      while(disA /*&& readButton()*/){
         Ma1_OFF;
         Ma2_OFF;
         Mb1_OFF;
@@ -38,7 +38,7 @@ void program2(){
       }
     }
     else if(!disAR){
-      while(disA && readButton()){
+      while(disA /*&& readButton()*/){
         Ma1_OFF;
         Ma2_ON;
         Mb1_OFF;
