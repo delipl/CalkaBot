@@ -1,16 +1,16 @@
 void program3(){
   if(!disB && disA){
-    while((!disB && disA) && readButton()){
+    while((!disB && disA) /*&& readButton()*/){
       goBackward();
     }
   }
   else if(!disA && disB){
-    while((!disA && disB) && readButton()){
+    while((!disA && disB) /*&& readButton()*/){
       goForward();
     }
   }
   if(!disBR){
-    while(disB && readButton()){
+    while(disB /*&& readButton()*/){
       Ma1_ON;
       Ma2_OFF;
       Mb1_OFF;
@@ -18,7 +18,7 @@ void program3(){
     }
   }
   else if(!disBL){
-    while(disB && readButton()){
+    while(disB /*&& readButton()*/){
       Ma1_OFF;
       Ma2_OFF;
       Mb1_ON;
@@ -26,7 +26,7 @@ void program3(){
     }
   }
   else if(!disAL){
-    while(disA && readButton()){
+    while(disA /*&& readButton()*/){
       Ma1_OFF;
       Ma2_OFF;
       Mb1_OFF;
@@ -34,7 +34,7 @@ void program3(){
     }
   }
   else if(!disAR){
-    while(disA && readButton()){
+    while(disA /*&& readButton()*/){
       Ma1_OFF;
       Ma2_ON;
       Mb1_OFF;
@@ -44,21 +44,21 @@ void program3(){
   else{
     //program6():
     if((!edgeAL && !edgeBL) || (!edgeAR && !edgeBR)){
-       start = millis();
+       //start = millis();
        goForward();
        Mb1_ON;
        Mb2_OFF;
-       delay(100);
+       _delay_ms(100);
      }
 
      //jeżeli dotykasz lini jedz w druga strone
      else if(floorSensors()){
-       start = millis();
+       //start = millis();
        direction_TOG;
        hardStop();
-       delay(150);
+       _delay_ms(150);
        go(0);
-       delay(50);
+       _delay_ms(50);
 
      }
 
@@ -66,11 +66,11 @@ void program3(){
      else{
         go(1);
 
-        if((millis() - start) > 1000){
+        /*if((millis() - start) > 1000){
           start = millis();
           hardStop();
-          delay(25);
-        }
+          _delay_ms(25);
+        }*/
       }
 
   }
