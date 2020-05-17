@@ -1,5 +1,5 @@
-schematic/*.s#*
-schematic/*.b#*
+calkabot*/schematic/*.s#*
+calkabot*/schematic/*.b#*
 .pio
 .pioenvs
 .piolibdeps
@@ -8,3 +8,4 @@ schematic/*.b#*
 platformio.ini
 lib/
 /calkabot*/.gitignore
+driver.pro
