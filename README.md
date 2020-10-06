@@ -5,7 +5,7 @@ CałkaBots are robots created by Jakub Kuziemski and Jakub Delicat. The first on
 CałkaBots 3d0 and 3k0 are comming.
 
 To program BluePill from hid bootloader it is nessesery to refresh flash data in STM32CUBE
-
+To run STM32CubeProgrammer on linux it is nessesery to install java zulu
 
 
 
