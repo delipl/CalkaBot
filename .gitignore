@@ -5,7 +5,7 @@ calkabot*/schematic/*.b#*
 .piolibdeps
 .clang_complete
 .gcc-flags.json
-platformio.ini
+
 lib/
 /calkabot*/.gitignore
 driver.pro
