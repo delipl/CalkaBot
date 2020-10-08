@@ -21508,13 +21508,13 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="4,7u"/>
-<part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2"/>
+<part name="SWD" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2"/>
 <part name="C17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100n"/>
 <part name="LM1" library="lm1117_11" deviceset="LM1117?-*" device="MP" override_package3d_urn="urn:adsk.eagle:package:17629158/3" override_package_urn="urn:adsk.eagle:footprint:17629160/1" override_locally_modified="yes" technology="3.3"/>
 <part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-US" device="CT3528" package3d_urn="urn:adsk.eagle:package:23325/2" value="10u"/>
 <part name="C19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-US" device="CT3528" package3d_urn="urn:adsk.eagle:package:23325/2" value="10u"/>
-<part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2"/>
+<part name="I2C" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2"/>
 <part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4k7"/>
 <part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4k7"/>
@@ -21714,9 +21714,9 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <attribute name="NAME" x="-80.01" y="115.7986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-80.01" y="110.998" size="1.778" layer="96"/>
 </instance>
-<instance part="R11" gate="G$1" x="-71.12" y="121.92" smashed="yes" rot="R90">
-<attribute name="NAME" x="-72.6186" y="118.11" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="-67.818" y="118.11" size="1.778" layer="96" rot="R90"/>
+<instance part="R11" gate="G$1" x="-71.12" y="127" smashed="yes" rot="R90">
+<attribute name="NAME" x="-72.6186" y="123.19" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-67.818" y="123.19" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="J1" gate="J1" x="-104.14" y="111.76" smashed="yes">
 <attribute name="VALUE" x="-106.68" y="101.854" size="1.778" layer="96" font="vector" rot="MR180" align="top-left"/>
@@ -21757,7 +21757,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <attribute name="NAME" x="-282.956" y="48.641" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-282.956" y="43.561" size="1.778" layer="96"/>
 </instance>
-<instance part="JP1" gate="A" x="-106.68" y="96.52" smashed="yes" rot="R180">
+<instance part="SWD" gate="A" x="-106.68" y="96.52" smashed="yes" rot="R180">
 <attribute name="NAME" x="-100.33" y="88.265" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-100.33" y="104.14" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -21780,7 +21780,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <attribute name="NAME" x="-230.124" y="94.615" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-230.124" y="89.789" size="1.778" layer="96"/>
 </instance>
-<instance part="JP2" gate="A" x="-40.64" y="116.84" smashed="yes" rot="R180">
+<instance part="I2C" gate="A" x="-40.64" y="116.84" smashed="yes" rot="R180">
 <attribute name="NAME" x="-34.29" y="108.585" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-34.29" y="124.46" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -21940,8 +21940,8 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 </segment>
 <segment>
 <pinref part="R11" gate="G$1" pin="2"/>
-<wire x1="-71.12" y1="127" x2="-71.12" y2="129.54" width="0.1524" layer="91"/>
-<label x="-71.12" y="129.54" size="1.778" layer="95"/>
+<wire x1="-71.12" y1="132.08" x2="-71.12" y2="129.54" width="0.1524" layer="91"/>
+<label x="-71.12" y="134.62" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R14" gate="G$1" pin="2"/>
@@ -21959,7 +21959,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <label x="-53.34" y="119.38" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="1"/>
+<pinref part="SWD" gate="A" pin="1"/>
 <wire x1="-104.14" y1="91.44" x2="-86.36" y2="91.44" width="0.1524" layer="91"/>
 <label x="-83.82" y="91.44" size="1.778" layer="95"/>
 </segment>
@@ -22051,7 +22051,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <pinref part="R2" gate="G$1" pin="2"/>
 <label x="-53.34" y="114.3" size="1.778" layer="95"/>
 <wire x1="-71.12" y1="114.3" x2="-53.34" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="-71.12" y1="114.3" x2="-71.12" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="114.3" x2="-71.12" y2="121.92" width="0.1524" layer="91"/>
 <junction x="-71.12" y="114.3"/>
 <pinref part="R11" gate="G$1" pin="1"/>
 </segment>
@@ -22221,12 +22221,12 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <pinref part="C19" gate="G$1" pin="-"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="4"/>
+<pinref part="SWD" gate="A" pin="4"/>
 <wire x1="-104.14" y1="99.06" x2="-86.36" y2="99.06" width="0.1524" layer="91"/>
 <label x="-83.82" y="99.06" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="A" pin="3"/>
+<pinref part="I2C" gate="A" pin="3"/>
 <wire x1="-38.1" y1="116.84" x2="-22.86" y2="116.84" width="0.1524" layer="91"/>
 <label x="-22.86" y="116.84" size="1.778" layer="95"/>
 </segment>
@@ -22410,7 +22410,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <label x="-53.34" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="A" pin="2"/>
+<pinref part="I2C" gate="A" pin="2"/>
 <wire x1="-38.1" y1="114.3" x2="-22.86" y2="114.3" width="0.1524" layer="91"/>
 <label x="-22.86" y="114.3" size="1.778" layer="95"/>
 </segment>
@@ -22428,7 +22428,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <label x="-53.34" y="45.72" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="A" pin="1"/>
+<pinref part="I2C" gate="A" pin="1"/>
 <wire x1="-38.1" y1="111.76" x2="-22.86" y2="111.76" width="0.1524" layer="91"/>
 <label x="-22.86" y="111.76" size="1.778" layer="95"/>
 </segment>
@@ -22555,7 +22555,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <pinref part="C19" gate="G$1" pin="+"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="A" pin="4"/>
+<pinref part="I2C" gate="A" pin="4"/>
 <wire x1="-38.1" y1="119.38" x2="-22.86" y2="119.38" width="0.1524" layer="91"/>
 <label x="-22.86" y="119.38" size="1.778" layer="95"/>
 </segment>
@@ -22619,7 +22619,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <label x="-109.22" y="20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="3"/>
+<pinref part="SWD" gate="A" pin="3"/>
 <wire x1="-104.14" y1="96.52" x2="-86.36" y2="96.52" width="0.1524" layer="91"/>
 <label x="-83.82" y="96.52" size="1.778" layer="95"/>
 </segment>
@@ -22674,7 +22674,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 </net>
 <net name="SWDA" class="0">
 <segment>
-<pinref part="JP1" gate="A" pin="2"/>
+<pinref part="SWD" gate="A" pin="2"/>
 <wire x1="-104.14" y1="93.98" x2="-86.36" y2="93.98" width="0.1524" layer="91"/>
 <label x="-83.82" y="93.98" size="1.778" layer="95"/>
 </segment>
