@@ -9,3 +9,4 @@ To run STM32CubeProgrammer on linux it is nessesery to install java zulu
 
 
 
+ 
