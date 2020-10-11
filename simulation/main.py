@@ -1,5 +1,7 @@
 import pygame, sys
 from pygame.locals import *
+from pygame.math import Vector2
+import math
 
 HEIGHT = 1000
 WIDTH = 1000
@@ -16,18 +18,19 @@ class Background():
 class Robot():
     def __init__(self):
         self.surface = pygame.image.load("assets/robot.png").convert_alpha()
-        self.rect = self.surface.get_rect()
-        self.posX = WIDTH/2
-        self.posY = HEIGHT/2
-        self.angle = 0
-        self.rect.center = (self.posX, self.posY)
+        self.pos = Vector2(WIDTH/2, HEIGHT/2)
+        self.rect = self.surface.get_rect(center=(self.pos.x, self.pos.y))
 
-    def rotate(self, surface, angle):
+    def movement(self, surface, angle, speed):
         self.angle = angle
-        self.surface_rotated = pygame.transform.rotate(self.surface, self.angle)
+        self.surface_rotated = pygame.transform.rotate(self.surface, -self.angle)
         self.old_center = self.rect.center
-        self.rect = self.surface_rotated.get_rect()
+        self.rect = self.surface.get_rect()
         self.rect.center = self.old_center
+        self.speed_x = speed * math.sin(math.radians(angle))
+        self.speed_y = speed * math.cos(math.radians(angle))
+        self.rect.x += self.speed_x
+        self.rect.y -= self.speed_y
         screen.blit(robot.surface_rotated, robot.rect)
 
 pygame.init()
@@ -37,6 +40,7 @@ clock = pygame.time.Clock()
 bg = Background()
 bg.create_bg()
 
+x =  45
 
 robot = Robot()
 
@@ -47,9 +51,7 @@ while True:
             sys.exit()
 
     bg.draw_bg()
-    robot.rotate(robot.surface, 45)
-
-
+    robot.movement(robot.surface,x, 1.5)
 
     pygame.display.update()
     clock.tick(60)
