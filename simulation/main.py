@@ -60,6 +60,10 @@ while True:
         angle = randomValues.getAngle(angle)
         count = 0
     speed = randomValues.getSpeed(speed)
+    f = open("data.txt", "a")
+    data = str(angle) + "\t" + str(speed) + "\n"
+    f.write(data)
+    f.close()
 
     robot.movement(robot.surface, angle, speed)
 
