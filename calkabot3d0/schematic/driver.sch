@@ -20133,12 +20133,45 @@ Created 2016-06-07, Hans Locher&lt;br&gt;
 <rectangle x1="-0.762" y1="-6.223" x2="0.762" y2="-2.794" layer="51"/>
 <rectangle x1="1.778" y1="-6.223" x2="3.302" y2="-2.794" layer="51"/>
 </package>
+<package name="SD4-01" urn="urn:adsk.eagle:footprint:27150/1" library_version="2">
+<description>&lt;b&gt;DIL/CODE SWITCH&lt;/b&gt;&lt;p&gt;
+Mors</description>
+<wire x1="2.032" y1="-3.175" x2="2.032" y2="3.175" width="0.254" layer="21"/>
+<wire x1="-2.032" y1="3.175" x2="-2.032" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="0.635" y2="-1.27" width="0.254" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="-0.635" y2="1.27" width="0.254" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="-0.635" y2="-1.27" width="0.254" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="0.635" y2="1.27" width="0.254" layer="21"/>
+<wire x1="-2.032" y1="-3.175" x2="-0.762" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="2.032" y1="-3.175" x2="0.762" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="0.762" y1="-3.175" x2="-0.762" y2="-3.175" width="0.254" layer="51"/>
+<wire x1="2.032" y1="3.175" x2="0.762" y2="3.175" width="0.254" layer="21"/>
+<wire x1="-2.032" y1="3.175" x2="-0.762" y2="3.175" width="0.254" layer="21"/>
+<wire x1="-0.762" y1="3.175" x2="0.762" y2="3.175" width="0.254" layer="51"/>
+<wire x1="0.508" y1="-1.016" x2="-0.508" y2="-1.016" width="0.254" layer="21"/>
+<wire x1="-0.508" y1="-0.254" x2="0.508" y2="-0.254" width="0.254" layer="21"/>
+<pad name="1" x="0" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="2" x="0" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<text x="-0.381" y="-2.667" size="0.9906" layer="21" ratio="12">1</text>
+<text x="-2.3622" y="-3.1242" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="3.6322" y="-3.1496" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<text x="-1.651" y="1.7018" size="0.9906" layer="21" ratio="12">ON</text>
+<rectangle x1="-0.381" y1="-3.937" x2="0.381" y2="-3.175" layer="51"/>
+<rectangle x1="-0.381" y1="3.175" x2="0.381" y2="3.937" layer="51"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="DP-03" urn="urn:adsk.eagle:package:27218/2" type="model" library_version="2">
 <description>DIL/CODE SWITCH</description>
 <packageinstances>
 <packageinstance name="DP-03"/>
+</packageinstances>
+</package3d>
+<package3d name="SD4-01" urn="urn:adsk.eagle:package:27236/1" type="box" library_version="2">
+<description>DIL/CODE SWITCH
+Mors</description>
+<packageinstances>
+<packageinstance name="SD4-01"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -20176,6 +20209,23 @@ Created 2016-06-07, Hans Locher&lt;br&gt;
 <pin name="2" x="0" y="-7.62" visible="pad" length="short" direction="pas" rot="R90"/>
 <pin name="3" x="2.54" y="-7.62" visible="pad" length="short" direction="pas" rot="R90"/>
 </symbol>
+<symbol name="DIP01" urn="urn:adsk.eagle:symbol:27109/1" library_version="2">
+<wire x1="-1.905" y1="5.08" x2="-1.905" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="-1.905" y1="5.08" x2="1.905" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="1.905" y1="5.08" x2="1.905" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="-1.905" y1="-5.08" x2="1.905" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="0.508" y1="-2.54" x2="-0.508" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="2.54" x2="0.508" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="2.54" x2="0.508" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="-2.54" x2="-0.508" y2="2.54" width="0.1524" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="4.445" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<text x="-0.127" y="-4.064" size="0.9906" layer="94" ratio="14">1</text>
+<text x="-0.889" y="3.175" size="0.9906" layer="94" ratio="14">ON</text>
+<rectangle x1="-0.254" y1="-2.286" x2="0.254" y2="0" layer="94"/>
+<pin name="2" x="0" y="7.62" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="1" x="0" y="-7.62" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="DP03" urn="urn:adsk.eagle:component:27316/2" prefix="S" uservalue="yes" library_version="2">
@@ -20202,6 +20252,31 @@ Created 2016-06-07, Hans Locher&lt;br&gt;
 <attribute name="MPN" value="MCDP03" constant="no"/>
 <attribute name="OC_FARNELL" value="1522004" constant="no"/>
 <attribute name="OC_NEWARK" value="74M2976" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SD4-01" urn="urn:adsk.eagle:component:27337/1" prefix="S" uservalue="yes" library_version="2">
+<description>&lt;b&gt;DIL/CODE SWITCH&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="DIP01" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SD4-01">
+<connects>
+<connect gate="1" pin="1" pad="1"/>
+<connect gate="1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27236/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -21545,6 +21620,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <part name="R17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
 <part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="30k"/>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="S1" library="switch-dil" library_urn="urn:adsk.eagle:library:375" deviceset="SD4-01" device="" package3d_urn="urn:adsk.eagle:package:27236/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -21865,6 +21941,10 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <attribute name="VALUE" x="84.582" y="87.63" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND21" gate="1" x="81.28" y="81.28" smashed="yes"/>
+<instance part="S1" gate="1" x="66.04" y="111.76" smashed="yes">
+<attribute name="NAME" x="63.5" y="106.68" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="70.485" y="106.68" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -21921,7 +22001,8 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <wire x1="55.88" y1="119.38" x2="53.34" y2="119.38" width="0.1524" layer="91"/>
 <junction x="53.34" y="119.38"/>
 <wire x1="53.34" y1="119.38" x2="53.34" y2="124.46" width="0.1524" layer="91"/>
-<label x="53.34" y="124.46" size="1.778" layer="95"/>
+<label x="58.42" y="124.46" size="1.778" layer="95"/>
+<wire x1="53.34" y1="124.46" x2="58.42" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="START" gate="G$1" pin="1"/>
@@ -22578,11 +22659,6 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <pinref part="C19" gate="G$1" pin="+"/>
 </segment>
 <segment>
-<pinref part="I2C" gate="A" pin="4"/>
-<wire x1="-38.1" y1="119.38" x2="-22.86" y2="119.38" width="0.1524" layer="91"/>
-<label x="-22.86" y="119.38" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="R16" gate="G$1" pin="2"/>
 <wire x1="-40.64" y1="101.6" x2="-40.64" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="-40.64" y1="104.14" x2="-33.02" y2="104.14" width="0.1524" layer="91"/>
@@ -22591,6 +22667,12 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <wire x1="-33.02" y1="101.6" x2="-33.02" y2="104.14" width="0.1524" layer="91"/>
 <junction x="-33.02" y="104.14"/>
 <label x="-22.86" y="104.14" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="S1" gate="1" pin="2"/>
+<wire x1="66.04" y1="119.38" x2="66.04" y2="124.46" width="0.1524" layer="91"/>
+<label x="71.12" y="124.46" size="1.778" layer="95"/>
+<wire x1="66.04" y1="124.46" x2="71.12" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$42" class="0">
@@ -22729,6 +22811,19 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <segment>
 <pinref part="USB" gate="G$1" pin="A"/>
 <pinref part="R8" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="VCC_S" class="0">
+<segment>
+<pinref part="S1" gate="1" pin="1"/>
+<wire x1="66.04" y1="104.14" x2="66.04" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="99.06" x2="71.12" y2="99.06" width="0.1524" layer="91"/>
+<label x="71.12" y="99.06" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="I2C" gate="A" pin="4"/>
+<wire x1="-38.1" y1="119.38" x2="-22.86" y2="119.38" width="0.1524" layer="91"/>
+<label x="-22.86" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
