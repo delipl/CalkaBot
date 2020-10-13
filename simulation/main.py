@@ -20,17 +20,20 @@ class Robot():
         self.surface = pygame.image.load("assets/robot.png").convert_alpha()
         self.pos = Vector2(WIDTH/2, HEIGHT/2)
         self.rect = self.surface.get_rect(center=(self.pos.x, self.pos.y))
+        self.go = 1
 
-    def movement(self, surface, angle, speed):
+    def movement(self, surface, angle, s):
+        self.old_center = self.rect.center
         self.angle = angle
         self.surface_rotated = pygame.transform.rotate(self.surface, -self.angle)
-        self.old_center = self.rect.center
         self.rect = self.surface_rotated.get_rect()
         self.rect.center = self.old_center
-        self.speed_x = speed * math.sin(math.radians(angle))
-        self.speed_y = speed * math.cos(math.radians(angle))
-        self.rect.x += self.speed_x
-        self.rect.y -= self.speed_y
+        if self.go == 1:
+            self.new_x = s * math.sin(math.radians(angle))
+            self.new_y = s * math.cos(math.radians(angle))
+            self.rect.x += self.new_x
+            self.rect.y -= self.new_y
+            self.go = 0
         screen.blit(self.surface_rotated, self.rect)
 
 pygame.init()
@@ -41,9 +44,8 @@ bg = Background()
 bg.create_bg()
 
 angle =  45
-velocity = 1.5
-time = 2
-new_angle = 45
+time = 1
+s = 100
 
 robot = Robot()
 
@@ -54,13 +56,10 @@ while True:
             sys.exit()
 
     bg.draw_bg()
-    robot.movement(robot.surface, angle, velocity)
+    x = robot.rect
+    robot.movement(robot.surface, angle, s)
     dt = round(pygame.time.get_ticks()/1000, 0)
-    #print(dt)
 
-    #if dt >= time:
-        #if angle != new_angle:
-            #angle += 1
 
     pygame.display.update()
     clock.tick(60)
