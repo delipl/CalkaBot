@@ -28,12 +28,12 @@ class Robot():
         self.surface_rotated = pygame.transform.rotate(self.surface, -self.angle)
         self.rect = self.surface_rotated.get_rect()
         self.rect.center = self.old_center
-        if self.go == 1:
-            self.new_x = s * math.sin(math.radians(angle))
-            self.new_y = s * math.cos(math.radians(angle))
-            self.rect.x += self.new_x
-            self.rect.y -= self.new_y
-            self.go = 0
+        #if self.go == 1:
+        self.new_x = s * math.sin(math.radians(angle))
+        self.new_y = s * math.cos(math.radians(angle))
+        self.rect.x += self.new_x
+        self.rect.y -= self.new_y
+        #self.go = 0
         screen.blit(self.surface_rotated, self.rect)
 
 pygame.init()
@@ -43,23 +43,40 @@ clock = pygame.time.Clock()
 bg = Background()
 bg.create_bg()
 
-angle =  45
+angle = [45, 60,55, 15, 50]
 time = 1
-s = 100
+s = 10
 
 robot = Robot()
+i = 0
+n = 0
 
 while True:
+  
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
-
     bg.draw_bg()
     x = robot.rect
-    robot.movement(robot.surface, angle, s)
+    
+    
+    if i == 0:
+        elo = angle[n]
+        robot.movement(robot.surface, elo, s)
+        pygame.display.update()
+        print("przesunalem sie")
+        i = 10
+        if n == 4:
+            n = 0
+        else:
+            n += 1
+       
+    i = i-1
+
     dt = round(pygame.time.get_ticks()/1000, 0)
-
-
-    pygame.display.update()
     clock.tick(60)
+
+    
+    #pygame.time.wait(100)
+    
