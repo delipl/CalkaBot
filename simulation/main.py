@@ -69,8 +69,11 @@ while True:
             for line in filehandle:
                 angle, s = line.split(',')
                 robot.movement(int(angle), int(s))
+                screen.blit(bg.bg_surface, bg.bg_rect)
                 screen.blit(robot.surface_rotated, robot.rect)
                 pygame.display.update()
+                screen.fill((0, 0, 0))
+
                 pygame.time.wait(1000)
                 if not line:
                     break
