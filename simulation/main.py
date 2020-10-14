@@ -36,10 +36,16 @@ class Robot():
 
         self.new_x = self.x + (s * math.sin(math.radians(self.angle)))
         self.new_y = self.y - (s * math.cos(math.radians(self.angle)))
-        self.rect.x = int(self.new_x)
-        self.rect.y = int(self.new_y)
-
-
+        self.a = int((self.new_x - self.x)/30)
+        self.b = int((self.new_y - self.y)/30)
+        for i in range(30):
+            #self.rect.x = int(self.new_x)
+            #self.rect.y = int(self.new_y)
+            self.rect.x = self.x + self.a*(i+1)
+            self.rect.y = self.y + self.b*(i+1)
+            screen.blit(bg.bg_surface, bg.bg_rect)
+            screen.blit(self.surface_rotated, self.rect)
+            pygame.display.update()
 
 
 pygame.init()
@@ -67,22 +73,20 @@ while True:
         try:
             filehandle = open(filename, 'r')
             for line in filehandle:
-                angle, s = line.split(',')
+                angle, s = line.split('     ')
+
                 robot.movement(int(angle), int(s))
                 screen.blit(bg.bg_surface, bg.bg_rect)
                 screen.blit(robot.surface_rotated, robot.rect)
                 pygame.display.update()
                 screen.fill((0, 0, 0))
-
                 pygame.time.wait(1000)
+                #print(robot.new_x - robot.rect.x)
+
                 if not line:
                     break
         finally:
             filehandle.close()
             x = 0
-
-
-
-
 
     clock.tick(60)
