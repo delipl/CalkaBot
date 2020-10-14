@@ -10,3 +10,4 @@ lib/
 /calkabot*/.gitignore
 driver.pro
 simulation/venv/*
+simulation/.idea/*
