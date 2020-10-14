@@ -10,3 +10,5 @@ lib/
 /calkabot*/.gitignore
 driver.pro
 simulation/venv/*
+calkabot3d0/.vscode/
+simulation/calkabot.code-workspace
