@@ -6,47 +6,52 @@ import math
 HEIGHT = 1000
 WIDTH = 1000
 
+
 class Background():
     def create_bg(self):
         self.bg_surface = pygame.image.load("assets/board.png").convert_alpha()
         self.bg_rect = self.bg_surface.get_rect()
 
     def draw_bg(self):
-        self.bg_rect.center = (HEIGHT/2, WIDTH/2)
+        self.bg_rect.center = (int(HEIGHT / 2), int(WIDTH / 2))
         screen.blit(self.bg_surface, self.bg_rect)
+
 
 class Robot():
     def __init__(self):
         self.surface = pygame.image.load("assets/robot.png").convert_alpha()
-        self.pos = Vector2(WIDTH/2, HEIGHT/2)
-        self.rect = self.surface.get_rect(center=(self.pos.x, self.pos.y))
-        self.go = 1
+        self.pos = Vector2(WIDTH / 2, HEIGHT / 2)
+        self.rect = self.surface.get_rect(center=(int(self.pos.x), int(self.pos.y)))
 
-    def movement(self, surface, angle, s):
-        self.old_center = self.rect.center
+    def movement(self, angle, s):
         self.angle = angle
+        self.x = self.rect.x
+        self.y = self.rect.y
+        self.old_center = self.rect.center
         self.surface_rotated = pygame.transform.rotate(self.surface, -self.angle)
         self.rect = self.surface_rotated.get_rect()
         self.rect.center = self.old_center
-        if self.go == 1:
-            self.new_x = s * math.sin(math.radians(angle))
-            self.new_y = s * math.cos(math.radians(angle))
-            self.rect.x += self.new_x
-            self.rect.y -= self.new_y
-            self.go = 0
-        screen.blit(self.surface_rotated, self.rect)
+
+        self.new_x = self.x + (s * math.sin(math.radians(angle)))
+        self.new_y = self.y - (s * math.cos(math.radians(angle)))
+        self.rect.x = int(self.new_x)
+        self.rect.y = int(self.new_y)
+
+
+
 
 pygame.init()
-screen  = pygame.display.set_mode((HEIGHT, WIDTH))
+screen = pygame.display.set_mode((HEIGHT, WIDTH))
 clock = pygame.time.Clock()
 
 bg = Background()
 bg.create_bg()
 
-angle =  45
+angle = 45
 time = 1
 s = 100
-
+x = 1
+filename = "data.txt"
 robot = Robot()
 
 while True:
@@ -56,10 +61,23 @@ while True:
             sys.exit()
 
     bg.draw_bg()
-    x = robot.rect
-    robot.movement(robot.surface, angle, s)
-    dt = round(pygame.time.get_ticks()/1000, 0)
+    if x == 1:
+        try:
+            filehandle = open(filename, 'r')
+            for line in filehandle:
+                angle, s = line.split(',')
+                robot.movement(int(angle), int(s))
+                screen.blit(robot.surface_rotated, robot.rect)
+                pygame.display.update()
+                pygame.time.wait(1000)
+                if not line:
+                    break
+        finally:
+            filehandle.close()
+            x = 0
 
 
-    pygame.display.update()
+
+
+
     clock.tick(60)
