@@ -22,9 +22,11 @@ class Robot():
         self.surface = pygame.image.load("assets/robot.png").convert_alpha()
         self.pos = Vector2(WIDTH / 2, HEIGHT / 2)
         self.rect = self.surface.get_rect(center=(int(self.pos.x), int(self.pos.y)))
+        self.old_angle = 0
 
     def movement(self, angle, s):
-        self.angle = angle
+        self.angle = angle + self.old_angle
+        self.old_angle += angle
         self.x = self.rect.x
         self.y = self.rect.y
         self.old_center = self.rect.center
@@ -32,8 +34,8 @@ class Robot():
         self.rect = self.surface_rotated.get_rect()
         self.rect.center = self.old_center
 
-        self.new_x = self.x + (s * math.sin(math.radians(angle)))
-        self.new_y = self.y - (s * math.cos(math.radians(angle)))
+        self.new_x = self.x + (s * math.sin(math.radians(self.angle)))
+        self.new_y = self.y - (s * math.cos(math.radians(self.angle)))
         self.rect.x = int(self.new_x)
         self.rect.y = int(self.new_y)
 
