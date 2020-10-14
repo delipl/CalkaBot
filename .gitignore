@@ -9,8 +9,9 @@ platformio.ini
 lib/
 /calkabot*/.gitignore
 driver.pro
-simulation/venv/*
-simulation/.idea/*
+simulation/venv/
+simulation/.idea/
+simulation/.idea/
 calkabot3d0/.vscode/
 simulation/calkabot.code-workspace
 
