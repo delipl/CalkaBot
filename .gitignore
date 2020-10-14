@@ -9,4 +9,4 @@ platformio.ini
 lib/
 /calkabot*/.gitignore
 driver.pro
-simulator/venv
+
