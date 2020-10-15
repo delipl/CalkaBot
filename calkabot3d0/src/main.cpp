@@ -16,9 +16,13 @@ void setup(){
   delay(2200);
   Serial.println("Połączono...");
   initGyro();
+  initMotor();
 }
 void loop(){
   printGyro();
-  
+  goForward(100);
+  delay(1000);
+  goForward(0);
+  delay(900);
   delay(100);
 }
