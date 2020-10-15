@@ -13,7 +13,7 @@ MPU6050 mpu;
 
 #define OUTPUT_READABLE_YAWPITCHROLL
 
-#define INTERRUPT_PIN PB9
+#define INTERRUPT_PIN PB4
 
 
 // MPU control/status vars
@@ -121,4 +121,21 @@ void printGyro() {
             Serial.println(ypr[2] * 180/M_PI);*/
         #endif
     }
+}
+void printAcc() {
+    // if programming failed, don't try to do anything
+    if (!dmpReady) return;
+     // display initial world-frame acceleration, adjusted to remove gravity
+            // and rotated based on known orientation from quaternion
+            mpu.dmpGetQuaternion(&q, fifoBuffer);
+            mpu.dmpGetAccel(&aa, fifoBuffer);
+            mpu.dmpGetGravity(&gravity, &q);
+            mpu.dmpGetLinearAccel(&aaReal, &aa, &gravity);
+            mpu.dmpGetLinearAccelInWorld(&aaWorld, &aaReal, &q);
+            Serial.print("aworld\t");
+            Serial.print(aaWorld.x);
+            Serial.print("\t");
+            Serial.print(aaWorld.y);
+            Serial.print("\t");
+            Serial.println(aaWorld.z);
 }
