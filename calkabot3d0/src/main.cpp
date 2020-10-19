@@ -9,20 +9,24 @@ void setup(){
         Fastwire::setup(400, true);
   #endif
 
+  /*
   //wait for Serial connection
   while(Serial.available()){
     Serial.println("");
-  }
+  }*/
   delay(2200);
   Serial.println("Połączono...");
+  
+  
   initGyro();
   initMotor();
+  initDistance(0); 
+ 
+  pinMode(LED, OUTPUT);
+  pinMode(encoder, INPUT);
 }
+
 void loop(){
-  printGyro();
-  goForward(100);
-  delay(1000);
-  goForward(0);
-  delay(900);
+  Serial.println(analogRead(encoder));
   delay(100);
 }

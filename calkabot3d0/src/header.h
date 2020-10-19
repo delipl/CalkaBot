@@ -1,4 +1,7 @@
 #include <Arduino.h>
+
+#define disL PB11
+#define disR PB10
 #include "distance.h"
 #include "accelerometer.h"
 
@@ -12,3 +15,6 @@
 void initMotor();
 
 #include "motor.h"
+
+#define LED PC13
+#define encoder A0

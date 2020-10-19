@@ -10,3 +10,4 @@ lib/
 /calkabot*/.gitignore
 driver.pro
 calkabot*/.vscode
+simulation/calkabot.code-workspace

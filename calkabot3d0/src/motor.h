@@ -42,3 +42,14 @@ void rotateTill(int angle, int speed){
     digitalWrite(Mb2, HIGH);
     digitalWrite(Mb1, LOW);
 }
+
+void rotate(int speed){
+    speed = map(speed, 0, 100, 0, 255);
+    analogWrite(PWMA, speed);
+    analogWrite(PWMB, speed);
+    digitalWrite(Ma2, HIGH);
+    digitalWrite(Ma1, LOW);
+    digitalWrite(Mb2, HIGH);
+    digitalWrite(Mb1, LOW);
+
+}

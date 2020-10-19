@@ -122,6 +122,25 @@ void printGyro() {
         #endif
     }
 }
+int getAngle(){
+    // if programming failed, don't try to do anything
+    if (!dmpReady) return 1000;
+    // read a packet from FIFO
+    if (mpu.dmpGetCurrentFIFOPacket(fifoBuffer)) {
+            mpu.dmpGetQuaternion(&q, fifoBuffer);
+            mpu.dmpGetGravity(&gravity, &q);
+            mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
+
+            float angle = ypr[0] * 180/M_PI;
+            if(angle < 0){
+              // shows angle 0 and 360
+              angle = map(angle, -1, -180, 359, 180);         
+            }
+            angle = int(angle);
+            return angle;
+    }
+    return 1000;
+}
 void printAcc() {
     // if programming failed, don't try to do anything
     if (!dmpReady) return;
