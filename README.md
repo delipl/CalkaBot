@@ -17,6 +17,6 @@ To run STM32CubeProgrammer on linux it is nessesery to install java zulu
 Ahh.. To run EAGLE on linux it is nessesery to copy library to $EAGLE/lib folder 
 `sudo cp /usr/lib/x86_64-linux-gnu/libxcb-dri3.so.0 lib/
 `
-.
+
 
   
