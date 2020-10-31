@@ -11,4 +11,4 @@ Ahh.. To run EAGLE on linux it is nessesery to copy library to $EAGLE/lib folder
 `
 .
 
- 
+  
