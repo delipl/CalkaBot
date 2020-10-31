@@ -4,13 +4,13 @@ import re
 
 # how many vals you want to read
 toRead = 2
-
+till   = 1000
 
 def main():
     ser = serial.Serial('/dev/ttyACM0')  # open serial port
     f = open("data.txt", "w")
    
-    for x in range(100):
+    for x in range(till):
         line = ser.readline()  
         line = str(line)
 
@@ -25,7 +25,7 @@ def main():
             # do not write \t after last value
             if val != toRead:
                 f.write("\t")
-
+            
         print(vals)
         f.write("\n")
     f.close()
