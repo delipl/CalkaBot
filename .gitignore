@@ -12,6 +12,8 @@ driver.pro
 simulation/venv/
 simulation/.idea/
 simulation/.idea/
-calkabot3d0/.vscode/
 simulation/calkabot.code-workspace
+calkabot*/.vscode
+calkabot.code-workspace
+calka.code-workspace
 
