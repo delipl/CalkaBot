@@ -10,7 +10,7 @@ def main():
     ser = serial.Serial('/dev/ttyACM0')  # open serial port
     f = open("data.txt", "w")
    
-    for x in range(till):
+    for _ in range(till):
         line = ser.readline()  
         line = str(line)
 
