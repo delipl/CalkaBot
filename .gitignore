@@ -1,5 +1,7 @@
-calkabot*/schematic/*.s#*
-calkabot*/schematic/*.b#*
+schematic/*.s#*
+schematic/*.b#*
+schematic/*.job
+schematic/*.pro
 .pio
 .pioenvs
 .piolibdeps
@@ -13,7 +15,7 @@ simulation/venv/
 simulation/.idea/
 simulation/.idea/
 simulation/calkabot.code-workspace
-calkabot*/.vscode
 calkabot.code-workspace
 calka.code-workspace
-.vscode/
+.vscode/*
+.pio
