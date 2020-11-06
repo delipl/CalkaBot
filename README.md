@@ -9,6 +9,11 @@ CałkaBots are robots created by Jakub Kuziemski and Jakub Delicat. The first on
 
 CałkaBots 3d0 and 3k0 are comming.
 
+# Software
+07.11.2020
+We grow up!
+It is time for STM32.
+
 # Hardware and software tips
 To program BluePill from hid bootloader it is nessesery to refresh flash data in STM32CUBE
 
@@ -19,4 +24,4 @@ Ahh.. To run EAGLE on linux it is nessesery to copy library to $EAGLE/lib folder
 `
 
 
-  
+
