@@ -18,5 +18,6 @@ calkabot*/.vscode
 calkabot.code-workspace
 calka.code-workspace
 .vscode/
-src/.metadata/
-src/Drivers
+*/.metadata/
+*/Drivers
+*/RemoteSystemsTempFiles/
