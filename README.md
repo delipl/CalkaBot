@@ -15,8 +15,6 @@ We grow up!
 It is time for STM32.
 
 # Hardware and software tips
-To program BluePill from hid bootloader it is nessesery to refresh flash data in STM32CUBE
-
 To run STM32CubeProgrammer on linux it is nessesery to install java zulu
 
 Ahh.. To run EAGLE on linux it is nessesery to copy library to $EAGLE/lib folder 
