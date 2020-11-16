@@ -20,7 +20,7 @@ It is time for STM32.
 |-------|--------|
 |Distans Sensors| 6 |
 |Floor Sensors| 4 |
-|Accel 7 Gyro| 1 |
+|Accel & Gyro| 1 |
 |LiPol charger| 3 |
 |LiPol overcharge/overdischarge protection| 3|
 |Short Protection| 3 |
