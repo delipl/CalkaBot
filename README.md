@@ -33,6 +33,8 @@ It is time for STM32.
 |LCD display| 1 |
 |3 bit switch| 1 |
 |On/Off switch| 1 |
+|Optical encoder| 1 |
+
 
 
 # Hardware and software tips
