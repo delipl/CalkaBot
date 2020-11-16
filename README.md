@@ -14,6 +14,27 @@ CałkaBots 3d0 and 3k0 are comming.
 We grow up!
 It is time for STM32.
 
+# PCB Design
+## Features
+|Feature|Quantity|
+|-------|--------|
+|Distans Sensors| 6 |
+|Floor Sensors| 4 |
+|Accel 7 Gyro| 1 |
+|LiPol charger| 3 |
+|LiPol overcharge/overdischarge protection| 3|
+|Short Protection| 3 |
+|Step down converter 5V| 1 |
+|Step down converter 3.3V| 1 |
+|Battery voltage checker| 1 |
+|Motor drivers| 2 |
+|Reset button| 1 |
+|Start button| 1 |
+|LCD display| 1 |
+|3 bit switch| 1 |
+|Battery on switch| 1 |
+
+
 # Hardware and software tips
 To run STM32CubeProgrammer on linux it is nessesery to install java zulu
 
