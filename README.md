@@ -32,7 +32,7 @@ It is time for STM32.
 |Start button| 1 |
 |LCD display| 1 |
 |3 bit switch| 1 |
-|Battery on switch| 1 |
+|On/Off switch| 1 |
 
 
 # Hardware and software tips
