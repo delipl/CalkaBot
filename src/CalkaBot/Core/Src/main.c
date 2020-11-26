@@ -28,6 +28,7 @@
 /* USER CODE BEGIN Includes */
 #include "usbd_cdc_if.h" 				// Plik bedacy interfejsem uzytkownika do kontrolera USB
 #include "motor.h"
+
 //#include "mpu6050.h"
 
 /* USER CODE END Includes */
@@ -47,6 +48,16 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+struct sensor
+{
+	char *name;
+	int writeAddress;
+	char *buff;
+	int size;
+
+};
+
+int configSensor(struct sensor s, char *name)
 
 /* USER CODE BEGIN PV */
 TIM_HandleTypeDef htim2;
@@ -58,12 +69,8 @@ TIM_HandleTypeDef htim3;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-/*
 
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-	HAL_GPIO_TogglePin(LED_BUILTIN_GPIO_Port, LED_BUILTIN_Pin);
-}*/
-// Inty od Timera 2 :)
+
 void TIM2_IRQHandler(void)
 {
 	HAL_TIM_IRQHandler(&htim2);
@@ -120,8 +127,8 @@ int main(void)
   //uint8_t MessageLength = 0; 		// Zawiera dlugosc wysylanej wiadomosci
   HAL_TIM_Base_Start_IT(&htim2);
   HAL_TIM_Base_Start_IT(&htim3);
-  //while(MPU6050_Init(&hi2c2));
   HAL_GPIO_WritePin(STBY_GPIO_Port, STBY_Pin, SET);
+  struct VL53L0X sensor;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -135,26 +142,13 @@ int main(void)
 	  			CDC_Transmit_FS(data, len);
 	  			HAL_ADC_Start(&hadc1);												//Rozpoczecie nowej konwersji
 	  	}*/
-	  if(!HAL_GPIO_ReadPin(DIS_L_GPIO_Port, DIS_L_Pin) && !HAL_GPIO_ReadPin(DIS_R_GPIO_Port, DIS_R_Pin)){
-	  	  goForward(1000);
-	  }
-	  else if(!HAL_GPIO_ReadPin(DIS_L_GPIO_Port, DIS_L_Pin)){
-		  goRight(1000);
-	  }
-	  else if(!HAL_GPIO_ReadPin(DIS_R_GPIO_Port, DIS_R_Pin)){
-		  goLeft(1000);
-	  }
-	  else{
-		  goLeft(250);
-	  }
-
-
-
-    /* USER CODE END WHILE */
-
+	  HAL_I2C_Master_Receive(hi2c1, sensor.readAddress, &sensor.buff, sensor.size, HAL_MAX_DELAY);
+	  CDC_Transmit_FS(sensor.buff, sensor.size);
+	  HAL_Delay(1000);
+	  /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
-  }
   /* USER CODE END 3 */
+  }
 }
 
 /**

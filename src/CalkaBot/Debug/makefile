@@ -19,6 +19,18 @@ RM := rm -rf
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(CC_DEPS)),)
+-include $(CC_DEPS)
+endif
+ifneq ($(strip $(C++_DEPS)),)
+-include $(C++_DEPS)
+endif
+ifneq ($(strip $(C_UPPER_DEPS)),)
+-include $(C_UPPER_DEPS)
+endif
+ifneq ($(strip $(CXX_DEPS)),)
+-include $(CXX_DEPS)
+endif
 ifneq ($(strip $(S_DEPS)),)
 -include $(S_DEPS)
 endif
@@ -27,6 +39,9 @@ ifneq ($(strip $(S_UPPER_DEPS)),)
 endif
 ifneq ($(strip $(C_DEPS)),)
 -include $(C_DEPS)
+endif
+ifneq ($(strip $(CPP_DEPS)),)
+-include $(CPP_DEPS)
 endif
 endif
 
@@ -51,7 +66,7 @@ all: CalkaBot.elf secondary-outputs
 
 # Tool invocations
 CalkaBot.elf: $(OBJS) $(USER_OBJS) /home/deli/Dokumenty/Projekty/repoCalka/src/CalkaBot/STM32F103C8TX_FLASH.ld
-	arm-none-eabi-gcc -o "CalkaBot.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/deli/Dokumenty/Projekty/repoCalka/src/CalkaBot/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CalkaBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-g++ -o "CalkaBot.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/deli/Dokumenty/Projekty/repoCalka/src/CalkaBot/STM32F103C8TX_FLASH.ld" -Wl,-Map="CalkaBot.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
